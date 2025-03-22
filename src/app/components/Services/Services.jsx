@@ -4,7 +4,7 @@ import { FaLock, FaShieldAlt, FaHeadset } from "react-icons/fa";
 const Services = () => {
   return (
     <>
-      <section className="p-10 text-center">
+      <section className="p-2 mt-[-30] text-center">
         <h3 className="text-3xl font-bold">Our Services</h3>
         <div className="mt-6 grid grid-cols-1 md:grid-cols-3 gap-6">
           {[
