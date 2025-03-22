@@ -68,7 +68,7 @@ const Header = () => {
         {/* Mobile Menu */}
         <div
           className={`absolute left-0 w-full bg-blue-900 text-white p-5 z-3 transition-transform duration-300 ${
-            isOpen ? "translate-y-20" : "-translate-y-full"
+            isOpen ? "translate-y-0" : "-translate-y-full"
           }`}
         >
           <nav className="flex flex-col space-y-4">
