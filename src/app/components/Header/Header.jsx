@@ -11,7 +11,7 @@ const Header = () => {
       className={` bg-white/40 text-white w-full rounded fixed text-center items-center z-1`}
     >
       {/* Desktop Menu */}
-      <nav className="invisible flex px-28 py-4 justify-between lg:visible w-full text-black">
+      <nav className="invisible flex px-28 py-4 justify-between gap-2 lg:visible w-full text-black">
         <div className="flex w-40  ">
           <img src="/images/biafo-v1.png" className=" w-30" />
         </div>
@@ -67,7 +67,7 @@ const Header = () => {
 
         {/* Mobile Menu */}
         <div
-          className={`absolute left-0 w-full bg-blue-900 text-white p-5 z-3 transition-transform duration-300 ${
+          className={`absolute left-0 w-full bg-blue-900 text-white p-5 pt-10 z-3 transition-transform duration-300 ${
             isOpen ? "translate-y-0" : "-translate-y-full"
           }`}
         >
