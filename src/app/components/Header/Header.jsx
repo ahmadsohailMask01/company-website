@@ -22,7 +22,9 @@ const Header = () => {
       {/* Desktop Menu */}
       <nav className="invisible flex px-28 py-4 justify-between gap-2 lg:visible w-full text-black">
         <div className="flex w-40  ">
-          <img src="/images/biafo-v1.png" className=" w-30" />
+          <a href="/">
+            <img src="/images/biafo-v1.png" className=" w-30" />
+          </a>
         </div>
         <div className="flex justify-evenly items-center gap-10">
           {navItems.map((item) => (
