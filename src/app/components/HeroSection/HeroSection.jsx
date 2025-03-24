@@ -2,6 +2,8 @@
 import React from "react";
 import {useRouter} from 'next/navigation'
 import {BsArrowRight} from 'react-icons/bs'
+import Button from "../Button/Button";
+import StaticDataCard from "../StaticDataCard/StaticDataCard";
 
 
 const HeroSection = () => {
@@ -9,20 +11,23 @@ const HeroSection = () => {
   return (
     <>
       <section
-        className={`flex text-center font-poppins items-center justify-center text-white p-10 pb-20 pt-0 mb-25  w-full z-0 `}
+        className={`flex flex-col text-center font-poppins items-center bg-center justify-center mb-8 bg-no-repeat bg-[url(/images/HeroBackground.svg)] bg-[auto_100%] text-white  w-full z-0 h-screen space-y-20 `}
       >
-        <div className=" flex flex-col relative justify-center text-center bg-[url(/images/HeroBackground.svg)] bg-center bg-no-repeat items-center gap-2 p-2 w-full rounded-2xl h-screen">
-          <h2 className="text-4xl font-bold text-black">
-            Transforming Ideas Into Scalable & <br /> Innovative Digital
+        <div className=" flex flex-col relative justify-center text-center items-center gap-2 w-full rounded-2xl">
+          <h2 className="text-4xl font-bold text-black mt-40">
+            Transforming <font className='text-[#255FC1]'>Ideas</font> Into Scalable & <br /> Innovative Digital
             Solutions
           </h2>
           <p className="mt-2 text-black">
           Innovative, high-performance digital solutions that drive success. Bringing ideas to life with expertise and efficiency.<br/> Let’s build the future—faster, smarter, and better!
           </p>
-          <button className="mt-4 px-6 py-2 bg-[#2F7AF7] rounded flex gap-2 justify-center items-center font-poppins" onClick={()=>router.push('/get-in-touch')} >
-            Get in Touch
-          </button>
+          <Button className="mt-4 px-6 py-2 mb-12 bg-[#2F7AF7] rounded flex gap-2 justify-center items-center font-poppins" onClick={()=>router.push('/get-in-touch')} label='Get in Touch'/>
         </div>
+        <div className="flex flex-col md:flex-row gap-20">
+          <StaticDataCard text={'95%'} value={93} title={'Engagement'} description={'Active Participation'}/>
+          <StaticDataCard text={'93%'} value={91} title={'Performance'} description={'Productivity Score'}/>
+          <StaticDataCard text={'97%'} value={95} title={'Satisfaction'} description={'Client Feedback'}/>
+          </div>
       </section>
     </>
   );

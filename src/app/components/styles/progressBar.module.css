@@ -1,0 +1,24 @@
+
+
+  .progress-container {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    background-color: aqua;
+  }
+ 
+  .progress-circle {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: conic-gradient(blue 75%, #ddd 0);
+  }
+ 
+  .progress-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 20px;
+    font-weight: bold;
+  }

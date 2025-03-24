@@ -41,7 +41,7 @@ const Header = () => {
         </div>
         <div className="flex justify-center text-sm items-center gap-3">
           <Button
-            onClick={() => window.open("/")}
+            onClick={() => router.push('/login')}
             label="Login"
             className="cursor-pointer text-black"
           />
