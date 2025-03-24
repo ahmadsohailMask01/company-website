@@ -2,9 +2,11 @@
 import React, { useState } from "react";
 import { Link, Menu, X } from "lucide-react";
 import Button from "../Button/Button";
+import { useRouter } from "next/navigation";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const router = useRouter();
 
   const navItems = [
     { name: "About Us", slug: "/about-us" },
@@ -17,13 +19,13 @@ const Header = () => {
 
   return (
     <header
-      className={` bg-white/40 text-white w-full rounded fixed text-center items-center z-1`}
+      className={` bg-white/40 text-white font-poppins w-full rounded fixed text-center items-center z-1`}
     >
       {/* Desktop Menu */}
       <nav className="invisible flex px-28 py-4 justify-between gap-2 lg:visible w-full text-black">
         <div className="flex w-40  ">
           <a href="/">
-            <img src="/images/biafo-v1.png" className=" w-30" />
+            <img src="/images/biafo-v1.png" className=" w-20" />
           </a>
         </div>
         <div className="flex justify-evenly items-center gap-10">
@@ -44,9 +46,9 @@ const Header = () => {
             className="cursor-pointer text-black"
           />
           <Button
-            onClick={() => window.open("/")}
+            onClick={() => router.push('/get-in-touch')}
             label="Get in Touch"
-            className="cursor-pointer text-white bg-[#15A5DF] px-4 py-2 rounded-3xl"
+            className="cursor-pointer text-white bg-[#15A5DF] px-4 py-2 text-sm rounded-3xl"
           />
         </div>
       </nav>
@@ -57,7 +59,7 @@ const Header = () => {
         <a href="/">
         <img
           src="/images/biafo-v1.png"
-          className="absolute top-5 w-30 left-2 z-0"
+          className="absolute top-5 w-15 left-2 z-0"
         />
         </a>
         <button
