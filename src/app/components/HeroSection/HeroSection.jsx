@@ -1,7 +1,10 @@
 "use client";
 import React from "react";
+import {useRouter} from 'next/navigation'
+import Button from "../Button/Button";
 
 const HeroSection = () => {
+  const router = useRouter();
   return (
     <>
       <section
@@ -13,11 +16,9 @@ const HeroSection = () => {
             Solutions
           </h2>
           <p className="mt-2 text-black">
-            Secure and easy transactions for everyone.
+          Innovative, high-performance digital solutions that drive success. Bringing ideas to life with expertise and efficiency.<br/> Let’s build the future—faster, smarter, and better!
           </p>
-          <button className="mt-4 px-6 py-2 bg-blue-500 rounded hover:bg-blue-700">
-            Read More
-          </button>
+          <Button className="mt-4 px-6 py-2 bg-[#2F7AF7] rounded" onClick={()=>router.push('/get-in-touch')} label={'Get In Touch'}/>
         </div>
       </section>
     </>

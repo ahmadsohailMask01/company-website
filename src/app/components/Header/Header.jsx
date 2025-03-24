@@ -48,7 +48,7 @@ const Header = () => {
           <Button
             onClick={() => router.push('/get-in-touch')}
             label="Get in Touch"
-            className="cursor-pointer text-white bg-[#15A5DF] px-4 py-2 text-sm rounded-3xl"
+            className="cursor-pointer text-white bg-[#2F7AF7] px-4 py-2 text-sm rounded-3xl"
           />
         </div>
       </nav>
