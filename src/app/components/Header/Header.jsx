@@ -41,7 +41,7 @@ const Header = () => {
         </div>
         <div className="flex justify-center text-sm items-center gap-3">
           <Button
-            onClick={() => router.push('/get-in-touch')}
+            onClick={() => router.push("/get-in-touch")}
             label="Get in Touch"
             className="cursor-pointer text-white bg-[#2F7AF7] px-4 py-2 text-sm rounded-3xl"
           />
@@ -52,29 +52,35 @@ const Header = () => {
 
       <div className="visible lg:invisible flex justify-between items-center w-full">
         <a href="/">
-        <img
-          src="/images/biafo-v1.png"
-          className="absolute top-5 w-15 left-2 z-0"
-        />
+          <img
+            src="/images/biafo-v1.png"
+            className="absolute top-7 w-15 left-2 z-0"
+          />
         </a>
         <button
           onClick={() => setIsOpen(!isOpen)}
           className="focus:outline-none text-black"
         >
           {isOpen ? (
-            <X size={28} className="absolute top-2 right-2 z-4 cursor-pointer text-amber-50" />
+            <X
+              size={28}
+              className="absolute top-2 right-2 z-4 cursor-pointer text-amber-50"
+            />
           ) : (
-            <Menu size={35} className="absolute right-4 cursor-pointer top-8 z-2" />
+            <Menu
+              size={35}
+              className="absolute right-4 cursor-pointer top-7 z-2"
+            />
           )}
         </button>
 
         {/* Mobile Menu */}
         <div
-          className={`absolute left-0 w-full bg-blue-900/50 rounded-2xl text-white p-5 pt-10 z-3 transition-transform duration-300 ${
+          className={`absolute left-0 w-full bg-blue-900/50 rounded-2xl text-white p-5 pt-20 z-3 transition-transform duration-300 ${
             isOpen ? "translate-y-15" : "-translate-y-full"
           }`}
         >
-          <nav className="flex flex-col space-y-4">
+          <nav className="flex flex-col space-y-4 items-center">
             {navItems.map((item) => (
               <a
                 key={item.name}
@@ -85,6 +91,11 @@ const Header = () => {
                 {item.name}
               </a>
             ))}
+            <Button
+              onClick={() => router.push("/get-in-touch")}
+              label="Get in Touch"
+              className="cursor-pointer text-white bg-[#2F7AF7] px-1 w-50 py-2 text-sm rounded"
+            />
           </nav>
         </div>
       </div>
