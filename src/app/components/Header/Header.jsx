@@ -54,25 +54,27 @@ const Header = () => {
       {/* Mobile Menu Button */}
 
       <div className="visible lg:invisible flex justify-between items-center w-full">
+        <a href="/">
         <img
           src="/images/biafo-v1.png"
           className="absolute top-6 w-30 left-2 z-0"
         />
+        </a>
         <button
           onClick={() => setIsOpen(!isOpen)}
           className="focus:outline-none text-black"
         >
           {isOpen ? (
-            <X size={28} className="absolute top-2 right-2 z-4 text-amber-50" />
+            <X size={28} className="absolute top-2 right-2 z-4 cursor-pointer text-amber-50" />
           ) : (
-            <Menu size={35} className="absolute right-4 top-10 z-2" />
+            <Menu size={35} className="absolute right-4 cursor-pointer top-10 z-2" />
           )}
         </button>
 
         {/* Mobile Menu */}
         <div
-          className={`absolute left-0 w-full bg-blue-900 text-white p-5 pt-30 z-3 transition-transform duration-300 ${
-            isOpen ? "translate-y-0" : "-translate-y-full"
+          className={`absolute left-0 w-full bg-blue-900/50 rounded-2xl text-white p-5 pt-10 z-3 transition-transform duration-300 ${
+            isOpen ? "translate-y-9" : "-translate-y-full"
           }`}
         >
           <nav className="flex flex-col space-y-4">
