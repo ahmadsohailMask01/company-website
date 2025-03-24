@@ -20,7 +20,7 @@ const HeroSection = () => {
           Innovative, high-performance digital solutions that drive success. Bringing ideas to life with expertise and efficiency.<br/> Let’s build the future—faster, smarter, and better!
           </p>
           <button className="mt-4 px-6 py-2 bg-[#2F7AF7] rounded flex gap-2 justify-center items-center font-poppins" onClick={()=>router.push('/get-in-touch')} >
-            Get in Touch <BsArrowRight size={20}/>
+            Get in Touch
           </button>
         </div>
       </section>

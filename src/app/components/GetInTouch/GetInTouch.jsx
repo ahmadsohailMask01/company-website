@@ -10,6 +10,7 @@ const GetInTouch = () => {
         <p className='text-base font-light text-center'>Whether you have a question about features, trials, pricing, need a demo, or anything else, our team is <br/> ready to answer all you questions</p>
     </div>
     </div>
+    <div className='flex items-center justify-center p-10 font-poppins'></div>
         </section>
         </>
   )
