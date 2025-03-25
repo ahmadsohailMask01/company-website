@@ -39,10 +39,10 @@ const Services = () => {
                 "Biafotech given its history has been always closely aligned with the education sector. Not only some of our early and major customers ",
             },
           ].map(({ icon: Icon, title, description }) => (
-            <div key={title} className="border p-8 rounded-lg shadow-lg ">
+            <div key={title} className="border p-8 rounded-lg shadow-lg bg-white text-black">
               <Icon className="text-blue-500 text-3xl mb-2" />
-              <h4 className="text-lg font-semibold">{title}</h4>
-              <p className="text-gray-600  mt-4">{description}</p>
+              <p className="text-lg font-semibold">{title}</p>
+              <p className="  mt-4">{description}</p>
             </div>
           ))}
         </div>
