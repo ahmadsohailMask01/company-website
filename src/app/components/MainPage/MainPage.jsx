@@ -1,3 +1,4 @@
+
 import Image from "next/image";
 import Header from "../Header/Header";
 import HeroSection from "../HeroSection/HeroSection";
