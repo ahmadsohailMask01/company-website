@@ -10,7 +10,7 @@ const Services = () => {
     <>
       <section className="flex flex-col justify-center items-center font-poppins p-8 mt-[-20] text-center bg-[#002049] mb-10 text-white ">
         <p className="text-3xl font-extrabold tracking-widest mb-4 ]">
-          OUR <font className="text-[#ffbc00]">SERVICES</font>
+          OUR <font className="text-[#15A5DF]">SERVICES</font>
         </p>
         <div className="mt-6 grid grid-cols-1 md:grid-cols-4 gap-6">
           {[
