@@ -92,7 +92,10 @@ const Header = () => {
               </a>
             ))}
             <Button
-              onClick={() => router.push("/get-in-touch")}
+              onClick={() => {
+                router.push("/get-in-touch");
+                setIsOpen(!open);
+              }}
               label="Get in Touch"
               className="cursor-pointer text-white bg-[#2F7AF7] px-1 w-50 py-2 text-sm rounded"
             />
