@@ -14,7 +14,7 @@ const Services = () => {
     "Empowering business with innovative, high-performance digital solutions, that drive growth and efficiency";
   return (
     <>
-      <section className="flex mt-[-20] text-center bg-[url(/images/services_bg.jpg)] bg-no-repeat bg-cover bg-center mb-10 text-white ">
+      <section className="flex mt-[-20] text-center bg-[url(/images/services_bg.jpg)] bg-no-repeat bg-cover bg-center text-white ">
         <div className="bg-[#002049]/90 p-8 flex flex-col justify-center items-center font-poppins" >
           <p className="text-4xl font-extrabold  mb-4 ]">
             WHAT WE <font className="text-[#2f7af7]">OFFER</font>
