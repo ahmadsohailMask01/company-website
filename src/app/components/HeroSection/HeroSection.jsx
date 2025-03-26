@@ -14,7 +14,7 @@ const HeroSection = () => {
       >
         <div className=" flex flex-col relative justify-center text-center items-center gap-2 w-full rounded-2xl">
           <h2 className="text-4xl font-bold text-black ">
-            Transforming <font className="text-[#255FC1]">Ideas</font> into
+            Transforming <font className="text-themebluehero">Ideas</font> into
             Scalable & <br /> Innovative Digital Solutions
           </h2>
           <p className="mt-2 text-black w-[90%] lg:w-[45%]">
@@ -29,7 +29,7 @@ const HeroSection = () => {
             label="Let's Connect"
           />
           <Button
-            className=" px-6 py-2 border-2 transition-all duration-300 border-themebluehero text-themebluehero rounded-[100px] flex gap-2 justify-center cursor-pointer items-center font-poppins font-medium hover:text-white hover:bg-[#255fc1] hover:border-[#255fc1]"
+            className=" px-6 py-2 border-2 transition-all duration-300 border-themebluehero text-[#2f7af7] hover:text-white rounded-[100px] flex gap-2 justify-center cursor-pointer items-center font-poppins font-medium  hover:bg-[#255fc1] hover:border-[#255fc1]"
             onClick={() => router.push("/about-us")}
             label="Why Biafotech"
           />

@@ -10,7 +10,7 @@ export default function FloatingInput() {
         type="text"
         id="floatingInput"
         className="peer w-full border-b-2 border-gray-300 bg-transparent tracking-wide font-medium text-white focus:border-blue-500 focus:outline-none p-2 placeholder-transparent"
-        placeholder="Enter text"
+        placeholder="Please enter email"
         onFocus={() => setIsFocused(true)}
         onBlur={() => setIsFocused(inputValue !== "")}
         onChange={(e) => setInputValue(e.target.value)}
@@ -23,7 +23,7 @@ export default function FloatingInput() {
             : "top-2 text-base"
         }`}
       >
-        Enter text
+        Email
       </label>
     </div>
   );

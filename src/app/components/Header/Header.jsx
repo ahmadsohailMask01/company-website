@@ -19,7 +19,7 @@ const Header = () => {
 
   return (
     <header
-      className={` bg-white/80 text-white font-poppins w-full rounded fixed text-center items-center z-1`}
+      className={` bg-white/100 text-white border-b-1 border-[#F2F2F2] font-poppins w-full rounded fixed text-center items-center z-1`}
     >
       {/* Desktop Menu */}
       <nav className="invisible flex px-28 py-4 justify-between gap-2 lg:visible w-full text-black">

@@ -21,7 +21,7 @@ const Footer = () => {
       <div className="container mx-auto px-5 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 justify-center gap-8">
         <div className="flex flex-col space-y-4 items-start lg:ml-4">
           {/* Address */}
-          <div className="">
+          <div className="ml-12">
             <h3 className="font-bold text-lg tracking-wider">ADDRESS</h3>
             <p className="font-light mt-2">
               Lahore — 1st floor, C-31/10, commercial zone, main boulevard, Lake
@@ -100,7 +100,7 @@ const Footer = () => {
       </div>
 
       {/* Copyright */}
-      <div className="mt-10 border-t border-gray-700 text-center pt-5 text-sm">
+      <div className="flex mt-10 border-t border-gray-700 text-center justify-center items-center pt-9 text-sm">
         &copy; 2017 - {new Date().getFullYear()} Biafotech. All rights reserved.
       </div>
     </footer>
