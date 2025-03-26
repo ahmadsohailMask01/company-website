@@ -7,10 +7,9 @@ export default function FloatingInput() {
   return (
     <div className="relative w-64 mt-4">
       <input
-        type="text"
+        type="email"
         id="floatingInput"
         className="peer w-full border-b-2 border-gray-300 bg-transparent tracking-wide font-medium text-white focus:border-blue-500 focus:outline-none p-2 placeholder-transparent"
-        placeholder="Please enter email"
         onFocus={() => setIsFocused(true)}
         onBlur={() => setIsFocused(inputValue !== "")}
         onChange={(e) => setInputValue(e.target.value)}

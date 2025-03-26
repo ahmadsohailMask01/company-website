@@ -11,7 +11,7 @@ const Industries = () => {
             <p className='text-base font-light'>Delivering tailored digital solutions to drive innovation & efficiency across diverse industries.</p>
         </div>
         <div className='grid grid-cols-1 md:grid-cols-5'>
-            <div className='flex flex-col p-12   justify-center items-start space-y-4'>
+            <div className='flex flex-col px-12   justify-center items-start space-y-4'>
                 <img src='/images/1.png' className=' w-16'/>
                 <p className='font-bold w-36 text-start text-lg'
                 >Business Consultancy</p>
