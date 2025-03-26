@@ -2,3 +2,12 @@
 .font-poppins {
   font-family: var(--font-geist-poppins);
 }
+.text-themebluehero{
+  color: #2f7af7;
+}
+.bg-themebluehero{
+  background-color: #2f7af7;
+}
+.border-themebluehero{
+  border-color: #2f7af7;
+}

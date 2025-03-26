@@ -11,14 +11,14 @@ const StaticDataCard = ({ value, text, title, description }) => {
             value={value}
             text={text}
             styles={buildStyles({
-              textColor: "#255fc1",
-              pathColor: "#255fc1",
+              textColor: "#2f7af7",
+              pathColor: "#2f7af7",
               textSize: "24px",
             })}
           />
         </div>
         <div className="flex flex-col p-1 w-auto space-y-1 justify-center">
-          <p className="font-semibold text-xl text-left text-[#255fc1] text-nowrap">
+          <p className="font-semibold text-xl text-left text-themebluehero text-nowrap">
             {title}
           </p>
           <p className="font-light  text-lg text-left text-nowrap">

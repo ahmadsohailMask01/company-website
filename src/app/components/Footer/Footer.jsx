@@ -6,6 +6,8 @@ import { BsLinkedin } from "react-icons/bs";
 import { ImFacebook2 } from "react-icons/im";
 import { PiInstagramLogoFill } from "react-icons/pi";
 
+import FloatingInput from "../FloatingInput/FloatingInput";
+
 const Footer = () => {
   const quickLinks = [
     { name: "About Us", slug: "/about-us" },
@@ -89,11 +91,7 @@ const Footer = () => {
           <h3 className="text-lg font-semibold text-white tracking-wider">NEWSLETTER</h3>
           <p className="text-sm mt-3">Stay updated with our latest news</p>
           <div className="mt-3">
-            <input
-              type="email"
-              placeholder="Enter your email"
-              className="w-full px-3 py-2 rounded bg-gray-200 text-gray-800 border border-gray-600 focus:outline-none"
-            />
+            <FloatingInput/>
             <button className="mt-2 w-full bg-[#15A5DF] hover:bg-blue-600 text-white font-bold tracking-wider px-3 py-2 rounded">
               Subscribe
             </button>
