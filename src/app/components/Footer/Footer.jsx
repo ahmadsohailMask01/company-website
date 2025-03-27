@@ -43,7 +43,7 @@ const Footer = () => {
           </div>
           <div className="flex justify-left items-center gap-1 font-light relative before:absolute before:left-0 before:bottom-0 before:h-[2px]  before:w-0 before:bg-white hover:before:w-full pb-1 before:transition-all before:duration-300">
           <MdEmail className="text-[#15A5DF] text-[20px] " />
-            <p className="">info@biafotech.com</p> 
+            <a href="mailto:info@biafotech.com" className="">info@biafotech.com</a> 
           </div>
 
           {/*Follow*/}

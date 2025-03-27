@@ -16,7 +16,7 @@ const ScrollToTopButton = () => {
 
   return (
     <button
-      onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+      onClick={() => window.scrollTo({ top:0, behavior: "smooth" })}
       className={`fixed bottom-6 right-6 bg-blue-600 text-white p-3 cursor-pointer rounded-full shadow-lg transition-opacity duration-300 ${
         visible ? "opacity-100" : "opacity-0 pointer-events-none"
       }`}
