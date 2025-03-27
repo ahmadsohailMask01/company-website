@@ -6,12 +6,14 @@ import Services from "../Services/Services";
 import AboutUs from "../AboutUs/AboutUs";
 import WhyChooseUs from "../WhyChooseUs/WhyChooseUs";
 import Footer from "../Footer/Footer";
+import Industries from "../Industries/Industries";
 
 export default function MainPage() {
   return (
     <>
       <HeroSection />
       <Services />
+      <Industries/>
     </>
   );
 }

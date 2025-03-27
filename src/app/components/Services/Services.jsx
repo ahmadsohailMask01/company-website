@@ -14,7 +14,7 @@ const Services = () => {
     "Empowering business with innovative, high-performance digital solutions, that drive growth and efficiency";
   return (
     <>
-      <section className="flex mt-[-20] text-center bg-[url(/images/services_bg.jpg)] bg-no-repeat bg-cover bg-center mb-10 text-white ">
+      <section className="flex mt-[-20] text-center bg-[url(/images/services_bg.jpg)] bg-no-repeat bg-cover bg-center text-white ">
         <div className="bg-[#002049]/90 p-8 flex flex-col justify-center items-center font-poppins" >
           <p className="text-4xl font-extrabold  mb-4 ]">
             WHAT WE <font className="text-[#2f7af7]">OFFER</font>
@@ -22,7 +22,7 @@ const Services = () => {
           <p className="text-base w-[36%] font-light flex self-center">
             {heading}
           </p>
-          <div className="mt-6 grid grid-cols-1 md:grid-cols-3 justify-center ml-40 mr-40 gap-12">
+          <div className="mt-6 grid grid-cols-1 md:grid-cols-3 justify-center lg:ml-40 lg:mr-40 gap-12">
             {[
               {
                 icon: FaLock,
