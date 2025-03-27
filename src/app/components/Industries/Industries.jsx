@@ -12,7 +12,7 @@ const Industries = () => {
         </div>
         <div className='grid grid-cols-1 md:grid-cols-5'>
             <div className='flex flex-col px-12   justify-center items-start space-y-4'>
-                <img src='/images/1.png' className=' w-16'/>
+                <img src='/images/Anime-1.gif' className=' w-16'/>
                 <p className='font-bold w-36 text-start text-lg'
                 >Business Consultancy</p>
             </div>
@@ -22,7 +22,7 @@ const Industries = () => {
                 '>Technology Consultancy</p>
             </div>
             <div className='flex flex-col px-12  justify-center items-start space-y-4'>
-            <img src='/images/3.png' className=' w-20'/>
+            <img src='/images/Anime-3.gif' className=' w-20'/>
                 <p className='font-bold w-36 text-start text-lg
                 '>ERP Strategy & Implementation</p>
             </div>
@@ -32,7 +32,7 @@ const Industries = () => {
                 '>Internet of Things (IOT)</p>
             </div>
             <div className='flex flex-col px-12  justify-center  items-start space-y-4'>
-            <img src='/images/5.png' className=' w-20'/>
+            <img src='/images/Anime-5.gif' className=' w-20'/>
                 <p className='font-bold w-36 text-start text-lg
                 '>Education & Training</p>
             </div>
