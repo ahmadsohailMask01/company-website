@@ -29,7 +29,7 @@ const Footer = () => {
             </p>
             <p className="mt-4 font-light">
               Karachi — Office No. 308, 3rd floor, Business Center, 19/1A Shahra
-              e Faisal, Block 6 PECHS Karachi
+              e Faisal, Block 6 PECHS Karachi.
             </p>
           </div>
         </div>
@@ -43,8 +43,7 @@ const Footer = () => {
           </div>
           <div className="flex justify-left items-center gap-1 font-light relative before:absolute before:left-0 before:bottom-0 before:h-[2px]  before:w-0 before:bg-white hover:before:w-full pb-1 before:transition-all before:duration-300">
           <MdEmail className="text-[#15A5DF] text-[20px] " />
-            <p className="">info@biafotech.com</p>
-            
+            <p className="">info@biafotech.com</p> 
           </div>
 
           {/*Follow*/}
@@ -74,13 +73,11 @@ const Footer = () => {
           <ul className="mt-3 space-y-2 ">
             {quickLinks.map((link) => {
               return (
-                
                   <li key={link.name}>
                     <a href={link.slug} className="hover:text-blue-400 font-light">
                       {link.name}
                     </a>
                   </li>
-                
               );
             })}
           </ul>
@@ -92,7 +89,7 @@ const Footer = () => {
           <p className="text-sm mt-3">Stay updated with our latest news</p>
           <div className="mt-3">
             <FloatingInput/>
-            <button className="mt-2 w-full bg-[#15A5DF] hover:bg-blue-600 text-white font-bold tracking-wider px-3 py-2 rounded">
+            <button className="mt-2 cursor-pointer w-full bg-[#15A5DF] hover:bg-[#2f7af7]  text-white font-bold tracking-wider px-3 py-2 rounded">
               Subscribe
             </button>
           </div>

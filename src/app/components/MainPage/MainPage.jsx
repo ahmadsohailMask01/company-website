@@ -8,6 +8,7 @@ import WhyChooseUs from "../WhyChooseUs/WhyChooseUs";
 import Footer from "../Footer/Footer";
 import Industries from "../Industries/Industries";
 import FAQs from "../FAQs/FAQs";
+import ScrollToTopButton from "../ScrollToTopButton";
 //import Testimonials from "../Testimonials/Testimonials";
 
 export default function MainPage() {
@@ -18,6 +19,7 @@ export default function MainPage() {
       <Industries/>
       {/* <Testimonials/> */}
       <FAQs/>
+      <ScrollToTopButton/>
     </>
   );
 }
