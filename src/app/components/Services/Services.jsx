@@ -64,7 +64,7 @@ const Services = () => {
           </div>
           <Button
             label="View More Services"
-            className="px-4 py-2 bg-transparent mt-8 mb-2 w-[200px] rounded-[100px] text-white border-2 border-[#2f7af7] font-poppins font-medium cursor-pointer hover:bg-[#2f7af7] transition-all duration-300"
+            className="px-4 py-2 bg-transparent mt-8 mb-2 w-[200px] rounded-[100px] text-white border-2 border-[#2f7af7] font-poppins font-medium cursor-pointer hover:bg-[#255fc1] hover:border-[#255fc1] transition-all duration-300"
             onClick={() => router.push("/services")}
           />
         </div>
