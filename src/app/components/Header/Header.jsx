@@ -1,8 +1,9 @@
 "use client";
 import React, { useState } from "react";
-import { Link, Menu, X } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import Button from "../Button/Button";
 import { useRouter } from "next/navigation";
+import Link from "next/link";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -24,19 +25,19 @@ const Header = () => {
       {/* Desktop Menu */}
       <nav className="invisible flex px-28 py-4 justify-between gap-2 lg:visible w-full text-black">
         <div className="flex w-40  ">
-          <a href="/">
+          <Link href="/">
             <img src="/images/biafo-v1.png" className=" w-20" />
-          </a>
+          </Link>
         </div>
         <div className="flex justify-evenly items-center gap-10">
           {navItems.map((item) => (
-            <a
+            <Link
               key={item.name}
               href={item.slug}
               className="hover:text-gray-300 transition duration-300"
             >
               {item.name}
-            </a>
+            </Link>
           ))}
         </div>
         <div className="flex justify-center text-sm items-center gap-3">

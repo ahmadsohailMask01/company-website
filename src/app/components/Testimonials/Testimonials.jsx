@@ -37,10 +37,10 @@ export default function Testimonials() {
   };
 
   return (
-    <section className="font-poppins w-full p-8 bg-gray-100">
-    <div className="max-w-3xl mx-auto p-6">
-      <h2 className="text-4xl font-extrabold text-center mb-6">WHAT OUR <font className='text-[#2f7af7]'>CLIENTS</font> SAY</h2>
-      <div className="relative bg-white shadow-md rounded-lg p-6 text-center">
+    <section className="font-poppins w-full p-8 bg-[#002049]">
+    <div className="flex flex-col mx-auto justify-center items-center p-6">
+      <h2 className="text-4xl font-extrabold text-center text-white mb-6">WHAT OUR <font className='text-[#2f7af7]'>CLIENTS</font> SAY</h2>
+      <div className="relative bg-white w-[80%] shadow-md rounded-lg p-6 text-center">
         <FaQuoteLeft className="text-gray-400 text-3xl mx-auto mb-4" />
         <p className="text-gray-700 text-lg italic">
           "{testimonials[currentIndex].text}"

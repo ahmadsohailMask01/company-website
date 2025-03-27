@@ -1,16 +1,17 @@
 "use client";
-import React from "react";
+import React, {useState, useEffect} from "react";
 import { useRouter } from "next/navigation";
 import { BsArrowRight } from "react-icons/bs";
 import Button from "../Button/Button";
 import StaticDataCard from "../StaticDataCard/StaticDataCard";
 
 const HeroSection = () => {
+
   const router = useRouter();
   return (
     <>
       <section
-        className={`mb-[400px] pt-[450px] space-y-2 md:mb-50 lg:pt-32 flex flex-col text-center font-poppins items-center bg-center justify-center lg:mb-0 bg-no-repeat bg-[url(/images/HeroBackground.svg)] bg-[auto_100%] text-white  w-full z-0 h-screen  md:pt-70 `}
+        className={`mb-[500px] pt-[450px] space-y-2 md:mb-50 lg:pt-32 flex flex-col text-center font-poppins items-center bg-center justify-center lg:mb-0 bg-no-repeat bg-[url(/images/HeroBackground.svg)] bg-[auto_100%] text-white  w-full z-0 h-screen  md:pt-70 `}
       >
         <div className=" flex flex-col relative justify-center text-center items-center gap-2 w-full rounded-2xl">
           <h2 className="text-4xl font-bold text-black ">

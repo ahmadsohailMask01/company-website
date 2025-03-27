@@ -33,10 +33,11 @@ export default function FAQs() {
   };
 
   return (
-    <section className="bg-[url(/images/faqs_bg.jpg)] bg-no-repeat bg-center w-full">
-        <div className="grid grid-cols-1 lg:grid-cols-2 justify-center p-8 items-center font-poppins bg-[#002049]/90">
-        <div className="flex justify-center items-center">
-            <p className="text-6xl font-bold"><font className='text-white'>FAQ</font><font className='text-[#15A5DF]'>'s</font></p>
+    <section className="w-full">
+        <div className="grid grid-cols-1 lg:grid-cols-2 justify-center p-8 items-center font-poppins bg-gray-200/90">
+        <div className="flex flex-col justify-start self-start space-y-4 items-start lg:mt-8">
+            <p className="text-6xl font-bold leading-normal">Frequently Asked Questions</p>
+            <p className="text-lg font-light leading-normal lg:w-[80%]">Get answers to commonly asked questions about KVL Tech, how it works, and how it can help you.</p>
         </div>
     <div className="max-w-2xl mx-auto p-6 ">
       <div className="space-y-4">
@@ -55,7 +56,7 @@ export default function FAQs() {
             </button>
             <div
               className={`overflow-hidden transition-all duration-300 ${
-                openIndex === index ? "max-h-40 p-4 text-white" : "max-h-0"
+                openIndex === index ? "max-h-40 p-4 text-[#002049]" : "max-h-0"
               }`}
             >
               {faq.answer}
