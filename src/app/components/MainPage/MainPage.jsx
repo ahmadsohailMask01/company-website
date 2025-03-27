@@ -19,7 +19,6 @@ export default function MainPage() {
       <Industries/>
       <Testimonials/>
       <FAQs/>
-      <ScrollToTopButton/>
     </>
   );
 }

@@ -42,7 +42,7 @@ const GetInTouch = () => {
             imgClassName={"w-10"}
             titleClassName="font-bold tracking-wide text-themebluehero text-sm"
             buttonClassName="mt-4 text-white cursor-pointer px-6 w-36 py-2 bg-themebluehero rounded flex gap-2 justify-center items-center font-poppins"
-            buttonOnClick={() => router.push("https://support.biafotech.com")}
+            buttonOnClick={() => window.open("https://support.biafotech.com")}
           />
         </div>
       </section>

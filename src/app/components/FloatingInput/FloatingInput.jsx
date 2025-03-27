@@ -1,6 +1,6 @@
-import { useState } from "react";
+import React,{ useState } from "react";
 
-export default function FloatingInput() {
+const FloatingInput = ({},ref) => {
   const [isFocused, setIsFocused] = useState(false);
   const [inputValue, setInputValue] = useState("");
 
@@ -13,6 +13,7 @@ export default function FloatingInput() {
         onFocus={() => setIsFocused(true)}
         onBlur={() => setIsFocused(inputValue !== "")}
         onChange={(e) => setInputValue(e.target.value)}
+        ref={ref}
       />
       <label
         htmlFor="floatingInput"
@@ -27,3 +28,4 @@ export default function FloatingInput() {
     </div>
   );
 }
+export default React.forwardRef(FloatingInput);
