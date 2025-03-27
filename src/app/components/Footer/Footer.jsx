@@ -37,13 +37,13 @@ const Footer = () => {
         {/* Contact */}
         <div className="text-justify flex flex-col space-y-2 lg:ml-16 items-start">
           <h3 className="font-bold text-lg tracking-wider">CONTACT</h3>
-          <div className="flex justify-left items-center gap-1 mt-1 font-light">
+          <div className="flex justify-left items-center gap-1 mt-1 font-light relative before:absolute before:left-0 before:bottom-0 before:h-[2px]  before:w-0 before:bg-white hover:before:w-full pb-1 before:transition-all before:duration-300">
           <FaPhone className="text-[#15A5DF] text-lg" />
             <p>+92 42 32303230</p>
           </div>
-          <div className="flex justify-left items-center gap-1 font-light">
+          <div className="flex justify-left items-center gap-1 font-light relative before:absolute before:left-0 before:bottom-0 before:h-[2px]  before:w-0 before:bg-white hover:before:w-full pb-1 before:transition-all before:duration-300">
           <MdEmail className="text-[#15A5DF] text-[20px] " />
-            <p>info@biafotech.com</p>
+            <p className="">info@biafotech.com</p>
             
           </div>
 
