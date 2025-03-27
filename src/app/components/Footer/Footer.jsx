@@ -2,9 +2,7 @@
 import React from "react";
 import { FaPhone } from "react-icons/fa6";
 import { MdEmail } from "react-icons/md";
-import { BsLinkedin } from "react-icons/bs";
-import { ImFacebook2 } from "react-icons/im";
-import { PiInstagramLogoFill } from "react-icons/pi";
+import Link from "next/link";
 
 import FloatingInput from "../FloatingInput/FloatingInput";
 
@@ -24,12 +22,10 @@ const Footer = () => {
           <div className="lg:ml-12">
             <h3 className="font-bold text-lg tracking-wider">ADDRESS</h3>
             <p className="font-light mt-2">
-              Lahore — 1st floor, C-31/10, commercial zone, main boulevard, Lake
-              City Raiwind Road Lahore.
+            Lahore — C-31/10, Lake City, Main Boulevard, Raiwind Road
             </p>
             <p className="mt-4 font-light">
-              Karachi — Office No. 308, 3rd floor, Business Center, 19/1A Shahra
-              e Faisal, Block 6 PECHS Karachi.
+            Karachi — Office no. 803, 8th Floor, Business Center, 19/1A, Shahrah-e-Faisal, Block 6, PECHS
             </p>
           </div>
         </div>
@@ -38,11 +34,11 @@ const Footer = () => {
         <div className="text-justify flex flex-col space-y-2 lg:ml-16 items-start">
           <h3 className="font-bold text-lg tracking-wider">CONTACT</h3>
           <div className="flex justify-left items-center gap-1 mt-1 font-light relative before:absolute before:left-0 before:bottom-0 before:h-[2px]  before:w-0 before:bg-white hover:before:w-full pb-1 before:transition-all before:duration-300">
-          <FaPhone className="text-[#15A5DF] text-lg" />
+          <FaPhone className="text-[#2f7af7] text-lg" />
             <a href="tel:+92 42 32303230">+92 42 32303230</a>
           </div>
           <div className="flex justify-left items-center gap-1 font-light relative before:absolute before:left-0 before:bottom-0 before:h-[2px]  before:w-0 before:bg-white hover:before:w-full pb-1 before:transition-all before:duration-300">
-          <MdEmail className="text-[#15A5DF] text-[20px] " />
+          <MdEmail className="text-[#2f7af7] text-[20px] " />
             <a href="mailto:info@biafotech.com" className="">info@biafotech.com</a> 
           </div>
 
@@ -74,9 +70,9 @@ const Footer = () => {
             {quickLinks.map((link) => {
               return (
                   <li key={link.name}>
-                    <a href={link.slug} className="hover:text-blue-400 font-light">
+                    <Link href={link.slug} className="hover:text-[#2f7af7] font-light">
                       {link.name}
-                    </a>
+                    </Link>
                   </li>
               );
             })}
@@ -89,7 +85,7 @@ const Footer = () => {
           <p className="text-sm mt-3">Stay updated with our latest news</p>
           <div className="mt-3">
             <FloatingInput/>
-            <button className="mt-2 cursor-pointer w-full bg-[#15A5DF] hover:bg-[#2f7af7]  text-white font-bold tracking-wider px-3 py-2 rounded">
+            <button className="mt-2 cursor-pointer w-full bg-[#2f7af7] hover:bg-[#255fc1]  text-white font-bold tracking-wider px-3 py-2 rounded">
               Subscribe
             </button>
           </div>

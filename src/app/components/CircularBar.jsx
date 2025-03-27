@@ -10,10 +10,10 @@ const CircularProgress = ({ value = 0, size = 120, strokeWidth = 10 }) => {
   const [displayValue, setDisplayValue] = useState(0);
 
   useEffect(() => {
-    controls.start({ strokeDashoffset: circumference - progress, transition: { duration: 1 } });
+    controls.start({ strokeDashoffset: circumference - progress, transition: { duration: 2 } });
     
     let start = 0;
-    const duration = 1000; // 1 second animation
+    const duration = 2000; // 1 second animation
     const intervalTime = duration / value;
     
     const interval = setInterval(() => {

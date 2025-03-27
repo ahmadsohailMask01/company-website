@@ -34,12 +34,12 @@ export default function FAQs() {
 
   return (
     <section className="w-full">
-        <div className="grid grid-cols-1 lg:grid-cols-2 justify-center p-8 items-center font-poppins bg-gray-200/90">
-        <div className="flex flex-col justify-start self-start space-y-4 items-start lg:mt-8">
-            <p className="text-6xl font-bold leading-normal">Frequently Asked Questions</p>
-            <p className="text-lg font-light leading-normal lg:w-[80%]">Get answers to commonly asked questions about KVL Tech, how it works, and how it can help you.</p>
+        <div className="grid grid-cols-1 lg:grid-cols-2 justify-center p-8 items-center font-poppins bg-white">
+        <div className="flex flex-col justify-start self-start space-y-4 items-start lg:mt-4 lg:ml-12">
+            <p className="text-4xl font-bold leading-normal">Frequently Asked <font className='text-themebluehero'>Questions</font></p>
+            <p className="text-base font-light leading-normal lg:w-[85%]">Curious about Biafotech? Discover how it works, what makes it unique, and how it can simplify your tech needs. Get quick, clear answers to all your questions! 🚀</p>
         </div>
-    <div className="max-w-2xl mx-auto p-6 ">
+    <div className="max-w-2xl mx-auto p-6">
       <div className="space-y-4">
         {faqs.map((faq, index) => (
           <div key={index} className="border-b border-[#2f7af7] rounded-b-[6px] shadow-lg">

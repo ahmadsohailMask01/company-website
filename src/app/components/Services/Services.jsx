@@ -53,7 +53,7 @@ const Services = () => {
               <div
                 key={title}
                 onMouseOver={()=>ref.current.style.color='white'}
-                onMouseOut={()=>ref.current.style.color='#15A5DF'}
+                onMouseOut={()=>ref.current.style.color='#2f7af7'}
                 className={`flex flex-col p-8 justify-center border-b-8 border-[#2f7af7] items-center rounded-lg shadow-lg bg-white text-black hover:bg-[#2f7af7] hover:text-white transition-all duration-300`}
               >
                 <Icon className={` text-[#2f7af7] text-6xl`} ref={ref} />

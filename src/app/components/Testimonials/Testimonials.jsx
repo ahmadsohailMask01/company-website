@@ -37,45 +37,19 @@ export default function Testimonials() {
   };
 
   return (
-    <section className="font-poppins w-full p-8 bg-[#002049]">
-    <div className="flex flex-col mx-auto justify-center items-center p-6">
-      <h2 className="text-4xl font-extrabold text-center text-white mb-6">WHAT OUR <font className='text-[#2f7af7]'>CLIENTS</font> SAY</h2>
-      <div className="relative bg-white w-[80%] shadow-md rounded-lg p-6 text-center">
-        <FaQuoteLeft className="text-gray-400 text-3xl mx-auto mb-4" />
-        <p className="text-gray-700 text-lg italic">
-          "{testimonials[currentIndex].text}"
-        </p>
-        <div className="mt-4 flex flex-col items-center">
-          <img
-            src={testimonials[currentIndex].image}
-            alt={testimonials[currentIndex].name}
-            className="w-16 h-16 rounded-full border-2 border-blue-500"
-          />
-          <p className="text-lg font-semibold mt-2">
-            {testimonials[currentIndex].name}
-          </p>
-          <span className="text-gray-500 text-sm">
-            {testimonials[currentIndex].role}
-          </span>
+    <section className=" flex flex-col items-center justify-center font-poppins w-full p-8 bg-[#002049] text-white">
+            <p className="text-4xl font-extrabold">REAL STORIES, <span className="text-[#2f7af7]"> REAL IMPACT</span> </p>
+            <p className="font-light text-base">Discover how our customers are achieving remarkable results with the help of our solutions.</p>
+        <div className=" flex justify-center items-center bg-white w-[80%] mt-2 h-[60vh] rounded">
+        <p className="text-4xl font-extrabold text-black">VIDEO</p>
         </div>
-
-        {/* Navigation Buttons */}
-        <div className="flex justify-between mt-6">
-          <button
-            onClick={prevTestimonial}
-            className="p-2 bg-gray-200 hover:bg-gray-300 rounded-full transition"
-          >
-            <FaChevronLeft className="text-gray-600" />
-          </button>
-          <button
-            onClick={nextTestimonial}
-            className="p-2 bg-gray-200 hover:bg-gray-300 rounded-full transition"
-          >
-            <FaChevronRight className="text-gray-600" />
-          </button>
-        </div>
+    {/* <div className="flex flex-col mx-auto space-y-4 justify-center items-center">
+      <p className="text-4xl font-extrabold text-center text-white">{'Real Stories, '.toUpperCase()} <font className='text-[#2f7af7]'>{'Real Impact'.toUpperCase()}</font></p>
+      <p className="text-base font-light text-white">Discover how our customers are achieving remarkable results with the help of our solutions.</p>
+      <div className="relative flex justify-center items-center text-9xl font-bold bg-white w-[80%] lg:h-[70vh] shadow-md rounded-lg p-6 text-center">
+        {'Video'.toUpperCase()}
       </div>
-    </div>
+    </div> */}
     </section>
   );
 }
