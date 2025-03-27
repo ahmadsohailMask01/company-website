@@ -1,8 +1,6 @@
-import React from "react";
-import Slider from "react-slick";
-import { FaQuoteLeft } from "react-icons/fa";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+'use client'
+import { useState } from "react";
+import { FaQuoteLeft, FaChevronLeft, FaChevronRight } from "react-icons/fa";
 
 const testimonials = [
   {
@@ -15,7 +13,7 @@ const testimonials = [
     name: "Jane Smith",
     role: "Marketing Head, Startup",
     image: "https://randomuser.me/api/portraits/women/44.jpg",
-    text: "Absolutely love the quality and support provided. Highly recommend their services!",
+    text: "Absolutely love the quality and support they provided. Highly recommend their services!",
   },
   {
     name: "Michael Johnson",
@@ -26,37 +24,58 @@ const testimonials = [
 ];
 
 export default function Testimonials() {
-  const settings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 3000,
-    arrows: false,
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  const nextTestimonial = () => {
+    setCurrentIndex((prevIndex) => (prevIndex + 1) % testimonials.length);
+  };
+
+  const prevTestimonial = () => {
+    setCurrentIndex(
+      (prevIndex) => (prevIndex - 1 + testimonials.length) % testimonials.length
+    );
   };
 
   return (
+    <section className="font-poppins w-full p-8 bg-gray-100">
     <div className="max-w-3xl mx-auto p-6">
-      <h2 className="text-2xl font-bold text-center mb-6">What Our Clients Say</h2>
-      <Slider {...settings}>
-        {testimonials.map((testimonial, index) => (
-          <div key={index} className="bg-white shadow-md rounded-lg p-6 text-center">
-            <FaQuoteLeft className="text-gray-400 text-3xl mx-auto mb-4" />
-            <p className="text-gray-700 text-lg italic">"{testimonial.text}"</p>
-            <div className="mt-4 flex flex-col items-center">
-              <img
-                src={testimonial.image}
-                alt={testimonial.name}
-                className="w-16 h-16 rounded-full border-2 border-blue-500"
-              />
-              <p className="text-lg font-semibold mt-2">{testimonial.name}</p>
-              <span className="text-gray-500 text-sm">{testimonial.role}</span>
-            </div>
-          </div>
-        ))}
-      </Slider>
+      <h2 className="text-4xl font-extrabold text-center mb-6">WHAT OUR <font className='text-[#2f7af7]'>CLIENTS</font> SAY</h2>
+      <div className="relative bg-white shadow-md rounded-lg p-6 text-center">
+        <FaQuoteLeft className="text-gray-400 text-3xl mx-auto mb-4" />
+        <p className="text-gray-700 text-lg italic">
+          "{testimonials[currentIndex].text}"
+        </p>
+        <div className="mt-4 flex flex-col items-center">
+          <img
+            src={testimonials[currentIndex].image}
+            alt={testimonials[currentIndex].name}
+            className="w-16 h-16 rounded-full border-2 border-blue-500"
+          />
+          <p className="text-lg font-semibold mt-2">
+            {testimonials[currentIndex].name}
+          </p>
+          <span className="text-gray-500 text-sm">
+            {testimonials[currentIndex].role}
+          </span>
+        </div>
+
+        {/* Navigation Buttons */}
+        <div className="flex justify-between mt-6">
+          <button
+            onClick={prevTestimonial}
+            className="p-2 bg-gray-200 hover:bg-gray-300 rounded-full transition"
+          >
+            <FaChevronLeft className="text-gray-600" />
+          </button>
+          <button
+            onClick={nextTestimonial}
+            className="p-2 bg-gray-200 hover:bg-gray-300 rounded-full transition"
+          >
+            <FaChevronRight className="text-gray-600" />
+          </button>
+        </div>
+      </div>
     </div>
+    </section>
   );
 }

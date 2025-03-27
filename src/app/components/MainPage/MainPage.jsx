@@ -9,7 +9,7 @@ import Footer from "../Footer/Footer";
 import Industries from "../Industries/Industries";
 import FAQs from "../FAQs/FAQs";
 import ScrollToTopButton from "../ScrollToTopButton";
-//import Testimonials from "../Testimonials/Testimonials";
+import Testimonials from "../Testimonials/Testimonials";
 
 export default function MainPage() {
   return (
@@ -17,7 +17,7 @@ export default function MainPage() {
       <HeroSection />
       <Services />
       <Industries/>
-      {/* <Testimonials/> */}
+      <Testimonials/>
       <FAQs/>
       <ScrollToTopButton/>
     </>
