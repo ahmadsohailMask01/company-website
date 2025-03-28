@@ -1,6 +1,7 @@
 'use client'
 import { useState } from "react";
 import { FaQuoteLeft, FaChevronLeft, FaChevronRight } from "react-icons/fa";
+import ReactPlayer from "react-player";
 
 const testimonials = [
   {
@@ -40,8 +41,9 @@ export default function Testimonials() {
     <section className=" flex flex-col items-center justify-center font-poppins w-full p-8 bg-[#002049] text-white">
             <p className="text-4xl font-extrabold">REAL STORIES, <span className="text-[#2f7af7]"> REAL IMPACT</span> </p>
             <p className="font-light text-base">Discover how our customers are achieving remarkable results with the help of our solutions.</p>
-        <div className=" flex justify-center items-center bg-white w-[80%] mt-2 h-[60vh] rounded">
-        <p className="text-4xl font-extrabold text-black">VIDEO</p>
+        <div className="inline-block justify-center items-center bg-transparent w-[80%] rounded-2xl mt-2 overflow-hidden">
+        <ReactPlayer url={'https://www.youtube.com/watch?v=LXb3EKWsInQ'} className
+        ='rounded' width={'100%'} height={'60vh'} style={{borderRadius:`20px`}}/>
         </div>
     {/* <div className="flex flex-col mx-auto space-y-4 justify-center items-center">
       <p className="text-4xl font-extrabold text-center text-white">{'Real Stories, '.toUpperCase()} <font className='text-[#2f7af7]'>{'Real Impact'.toUpperCase()}</font></p>
