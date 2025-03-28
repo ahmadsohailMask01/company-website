@@ -83,14 +83,14 @@ const Header = () => {
         >
           <nav className="flex flex-col space-y-4 items-center">
             {navItems.map((item) => (
-              <a
+              <Link
                 key={item.name}
                 href={item.slug}
                 className="hover:text-gray-300 text-lg"
                 onClick={() => setIsOpen(false)} // Close menu on click
               >
                 {item.name}
-              </a>
+              </Link>
             ))}
             <Button
               onClick={() => {
