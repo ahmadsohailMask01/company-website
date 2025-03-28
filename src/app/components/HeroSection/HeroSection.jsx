@@ -11,7 +11,7 @@ const HeroSection = () => {
   return (
     <>
       <section
-        className={`h-[120vh] md:h-[230vh] flex flex-col space-y-8  text-center font-poppins items-center bg-[url(/images/HeroBackground.svg)]  bg-center justify-center  bg-no-repeat  text-white  w-full lg:h-[710px] `}
+        className={`h-[150vh] md:h-[230vh] flex flex-col space-y-8  text-center font-poppins items-center bg-[url(/images/HeroBackground.svg)]  bg-center justify-center  bg-no-repeat  text-white  w-full lg:h-[710px] `}
       >
         <div className=" flex flex-col relative justify-center lg:mt-32 text-center items-center gap-2 w-full rounded-2xl">
           <h2 className="text-4xl font-bold text-black ">
