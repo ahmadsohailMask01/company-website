@@ -11,9 +11,9 @@ const HeroSection = () => {
   return (
     <>
       <section
-        className={`pb-[500px] pt-[450px] space-y-2 md:pb-50 lg:pt-32 flex flex-col text-center font-poppins items-center bg-center justify-center lg:pb-0 bg-no-repeat bg-[url(/images/HeroBackground.svg)] bg-[auto_100%] text-white  w-full z-0 h-screen  md:pt-70 `}
+        className={`h-[270vh] md:h-[230vh] flex flex-col space-y-8  text-center font-poppins items-center bg-[url(/images/HeroBackground.svg)]  bg-center justify-center  bg-no-repeat  text-white  w-full lg:h-[710px] `}
       >
-        <div className=" flex flex-col relative justify-center text-center items-center gap-2 w-full rounded-2xl">
+        <div className=" flex flex-col relative justify-center lg:mt-32 text-center items-center gap-2 w-full rounded-2xl">
           <h2 className="text-4xl font-bold text-black ">
             Transforming <font className="text-themebluehero">Ideas</font> into
             Scalable & <br /> Innovative Digital Solutions
@@ -23,7 +23,7 @@ const HeroSection = () => {
             Bringing ideas to life with expertise and efficiency.
             Let’s build the future—faster, smarter, and better!
           </p>
-          <div className="flex flex-col space-y-2 gap-4 mt-4 mb-20 items-center justify-center md:flex-row md:justify-center md:items-center">
+          <div className="flex flex-col space-y-2 gap-4 mt-4 mb-16 items-center justify-center md:flex-row md:justify-center md:items-center">
           <Button
             className="px-6 py-2 border-2 border-themebluehero bg-themebluehero rounded-[100px] flex gap-2 justify-center cursor-pointer items-center font-poppins font-medium md:mt-2"
             onClick={() => router.push("/get-in-touch")}
