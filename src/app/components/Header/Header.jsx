@@ -52,12 +52,12 @@ const Header = () => {
       {/* Mobile Menu Button */}
 
       <div className="visible lg:invisible flex justify-between items-center w-full">
-        <a href="/">
+        <Link href="/">
           <img
             src="/images/biafo-v1.png"
             className="absolute top-7 w-15 left-2 z-0"
           />
-        </a>
+        </Link>
         <button
           onClick={() => setIsOpen(!isOpen)}
           className="focus:outline-none text-black"
