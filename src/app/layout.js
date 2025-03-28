@@ -34,7 +34,7 @@ export default function RootLayout({ children }) {
         <Header />
         {children}
         <Footer />
-        
+        <ScrollToTopButton/>
       </body>
     </html>
   );
