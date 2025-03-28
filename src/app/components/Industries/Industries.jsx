@@ -12,7 +12,7 @@ const Industries = () => {
         <div className=' text-4xl font-extrabold text-black'>
             <p>WHO WE <font className='text-[#2F7af7]'>HELP</font></p>
         </div>
-        <div className=' text-black text-center font-medium tracking-wide text-lg w-[40%]'>
+        <div className=' text-black text-center font-medium tracking-wide text-lg lg:w-[40%]'>
             <p className='text-base font-light'>Delivering tailored digital solutions to drive innovation & efficiency across diverse industries.</p>
         </div>
         <div className={`grid ${width<=430?'grid-cols-1':'grid-cols-2'} md:grid-cols-5`}>

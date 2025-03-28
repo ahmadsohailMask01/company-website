@@ -22,7 +22,7 @@ const Services = () => {
           <p className="text-4xl font-extrabold  mb-4 ]">
             WHAT WE <font className="text-[#2f7af7]">OFFER</font>
           </p>
-          <p className="text-base w-[36%] font-light flex self-center">
+          <p className="text-base lg:w-[36%] font-light flex self-center">
             {heading}
           </p>
           <div className="mt-6 grid grid-cols-1 md:grid-cols-3 justify-center lg:ml-40 lg:mr-40 gap-12">

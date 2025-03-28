@@ -36,7 +36,7 @@ export default function Testimonials() {
   console.log('Width: ', size);
 
   return (
-    <section className=" flex flex-col items-center justify-center font-poppins w-full p-8 bg-[#002049] text-white">
+    <section className=" flex flex-col text-center items-center justify-center font-poppins w-full p-8 bg-[#002049] text-white">
             <p className="text-4xl font-extrabold">REAL STORIES, <span className="text-[#2f7af7]"> REAL IMPACT</span> </p>
             <p className="font-light text-base">Discover how our customers are achieving remarkable results with the help of our solutions.</p>
         <div className="inline-block justify-center items-center bg-transparent w-[80%] rounded-2xl mt-2 overflow-hidden">
