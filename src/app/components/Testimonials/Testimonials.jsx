@@ -1,7 +1,9 @@
 'use client'
 import { useState } from "react";
+import dynamic from "next/dynamic";
 import { FaQuoteLeft, FaChevronLeft, FaChevronRight } from "react-icons/fa";
-import ReactPlayer from "react-player";
+
+const ReactPlayer = dynamic(() => import("react-player"), { ssr: false });
 
 const testimonials = [
   {
