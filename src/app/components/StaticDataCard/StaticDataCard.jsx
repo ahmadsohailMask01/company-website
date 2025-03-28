@@ -9,9 +9,9 @@ const StaticDataCard = ({ value, text, title, description}) => {
   
   return (
     <>
-      <div className="flex justify-between  font-poppins font-semibold items-center gap-3 p-2 w-auto rounded bg-transparent text-black">
+      <div className="flex justify-between font-poppins font-semibold items-center gap-3 p-2 w-[50%] md:w-[50%] lg:w-auto rounded bg-transparent text-black">
         <div className="w-30">
-          <CircularProgress value={value}/>
+          <CircularProgress value={value} text={text}/>
         </div>
         <div className="flex flex-col p-1 w-auto space-y-1 justify-center">
           <p className="font-semibold text-xl text-left text-themebluehero text-nowrap">

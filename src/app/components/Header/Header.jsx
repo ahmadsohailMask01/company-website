@@ -77,7 +77,7 @@ const Header = () => {
 
         {/* Mobile Menu */}
         <div
-          className={`absolute left-0 w-full bg-blue-900/50 rounded-2xl text-white p-5 pt-20 z-3 transition-transform duration-300 ${
+          className={`absolute left-0 w-full bg-[#255fc1] rounded-2xl text-white p-5 pt-20 z-3 transition-transform duration-300 ${
             isOpen ? "translate-y-15" : "-translate-y-full"
           }`}
         >
@@ -98,7 +98,7 @@ const Header = () => {
                 setIsOpen(!open);
               }}
               label="Get in Touch"
-              className="cursor-pointer text-white bg-[#2F7AF7] px-1 w-50 py-2 text-sm rounded"
+              className="cursor-pointer text-white bg-[#2f7af7] px-1 w-50 py-2 text-sm rounded"
             />
           </nav>
         </div>

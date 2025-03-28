@@ -1,7 +1,7 @@
 import { motion, useAnimation } from "framer-motion";
 import { useEffect, useState } from "react";
 
-const CircularProgress = ({ value = 0, size = 120, strokeWidth = 10 }) => {
+const CircularProgress = ({ value = 0, text, size = 90, strokeWidth = 10 }) => {
   const radius = (size - strokeWidth) / 2;
   const circumference = 2 * Math.PI * radius;
   const progress = (value / 100) * circumference;
@@ -19,7 +19,7 @@ const CircularProgress = ({ value = 0, size = 120, strokeWidth = 10 }) => {
     const interval = setInterval(() => {
       start += 1;
       setDisplayValue(start);
-      if (start >= value) {
+      if (start >= text) {
         clearInterval(interval);
       }
     }, intervalTime);
@@ -51,7 +51,7 @@ const CircularProgress = ({ value = 0, size = 120, strokeWidth = 10 }) => {
           animate={controls}
         />
       </svg>
-      <div className="absolute inset-0 flex items-center justify-center text-xl font-bold text-blue-500">
+      <div className="absolute inset-0 flex items-center justify-center text-xl font-bold text-themebluehero">
         {displayValue}%
       </div>
     </div>

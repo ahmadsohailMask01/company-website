@@ -3,6 +3,9 @@ import React, {useState, useRef} from "react";
 import { FaLock, FaShieldAlt, FaHeadset } from "react-icons/fa";
 import Button from "../Button/Button";
 import { useRouter } from "next/navigation";
+import { IoIosCloudOutline } from "react-icons/io";
+import { FaRegLightbulb } from "react-icons/fa";
+import { HiOutlineWrenchScrewdriver } from "react-icons/hi2";
 
 const Services = () => {
   const router = useRouter();
@@ -25,26 +28,26 @@ const Services = () => {
           <div className="mt-6 grid grid-cols-1 md:grid-cols-3 justify-center lg:ml-40 lg:mr-40 gap-12">
             {[
               {
-                icon: FaLock,
-                title: "Business Consultancy",
+                icon: FaRegLightbulb,
+                title: "IT Consulting",
                 description:
-                  "Business application modernization and consultancy removes organizational barriers to ensure fast",
+                  "We help businesses with IT solutions to improve performance and growth.",
                 itemNo: "1",
                 ref: icon1
               },
               {
-                icon: FaShieldAlt,
-                title: "Technology Consultancy",
+                icon: IoIosCloudOutline,
+                title: "Cloud Solutions",
                 description:
-                  "Business application modernization and consultancy removes organizational barriers to ensure fast",
+                  "We provide secure cloud services to store, manage, and access data.",
                 itemNo: "2",
                 ref: icon2
               },
               {
-                icon: FaHeadset,
-                title: "ERP Implementation",
+                icon: HiOutlineWrenchScrewdriver,
+                title: "IT Support & Maintenance",
                 description:
-                  "Business application modernization and consultancy removes organizational barriers to ensure fast",
+                  "We provide 24/7 support to keep your systems running without issues.",
                 itemNo: "3",
                 ref: icon3
               },

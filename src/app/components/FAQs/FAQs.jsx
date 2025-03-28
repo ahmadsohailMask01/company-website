@@ -4,24 +4,24 @@ import { FaChevronDown } from "react-icons/fa"; // Install react-icons if needed
 
 const faqs = [
   {
-    question: "What services does your website offer?",
-    answer: "Our website provides a range of services, including [list of services].",
+    question: "What services do you provide?",
+    answer: "We offer software development, web and mobile apps, cloud solutions, cybersecurity, and IT consulting to help businesses grow.",
   },
   {
-    question: "How can I contact customer support?",
-    answer: "You can reach our support team via email at support@example.com or our contact form.",
+    question: "How can I get a project estimate?",
+    answer: "Share your project details with us, and we’ll review your requirements and provide a customized cost estimate.",
   },
   {
-    question: "Is my personal data safe on your website?",
-    answer: "Yes! We use advanced encryption methods to protect your data. Check our Privacy Policy.",
+    question: "Do you provide support after project delivery?",
+    answer: "Yes! We offer ongoing maintenance and support to ensure your system runs smoothly and stays updated.",
   },
   {
-    question: "Do you offer refunds or cancellations?",
-    answer: "Our refund and cancellation policy depends on the type of service purchased. See our Refund Policy.",
+    question: "How long will my project take?",
+    answer: "The timeline depends on the project’s complexity. After understanding your requirements, we’ll provide an estimated delivery time.",
   },
   {
-    question: "How do I get started?",
-    answer: "Simply sign up and follow the guided steps to access our services.",
+    question: "Why should I work with Biafotech?",
+    answer: "We deliver high-quality, secure, and scalable solutions with expert guidance, timely execution, and dedicated support.",
   },
 ];
 

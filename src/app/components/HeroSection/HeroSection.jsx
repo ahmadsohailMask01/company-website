@@ -11,9 +11,9 @@ const HeroSection = () => {
   return (
     <>
       <section
-        className={`h-[170vh] md:h-[230vh] flex flex-col space-y-8  text-center font-poppins items-center bg-[url(/images/HeroBackground.svg)]  bg-center justify-center  bg-no-repeat  text-white  w-full lg:h-[710px] `}
+        className={`h-[120vh] md:h-[110vh] flex flex-col space-y-8  text-center font-poppins items-center bg-[url(/images/HeroBackground.svg)]  bg-center justify-center  bg-no-repeat  text-white  w-full lg:h-[710px] `}
       >
-        <div className=" flex flex-col relative justify-center lg:mt-32 text-center items-center gap-2 w-full rounded-2xl">
+        <div className="mt-20 flex flex-col relative justify-center md:mt-40 lg:mt-32 text-center items-center gap-2 w-full rounded-2xl">
           <h2 className="text-4xl font-bold text-black ">
             Transforming <font className="text-themebluehero">Ideas</font> into
             Scalable & <br /> Innovative Digital Solutions
@@ -38,20 +38,20 @@ const HeroSection = () => {
         </div>
         <div className="flex flex-col space-y-1 justify-center lg:w-full lg:flex-row lg:gap-20">
           <StaticDataCard
-            text={"95%"}
-            value={93}
+            text={95}
+            value={91}
             title={"Engagement"}
             description={"Active Participation"}
           />
           <StaticDataCard
-            text={"93%"}
-            value={91}
+            text={93}
+            value={89}
             title={"Performance"}
             description={"Productivity Score"}
           />
           <StaticDataCard
-            text={"97%"}
-            value={95}
+            text={97}
+            value={93}
             title={"Satisfaction"}
             description={"Client Feedback"}
           />
