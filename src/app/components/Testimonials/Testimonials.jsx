@@ -40,7 +40,7 @@ export default function Testimonials() {
             <p className="text-4xl font-extrabold">REAL STORIES, <span className="text-[#2f7af7]"> REAL IMPACT</span> </p>
             <p className="font-light text-base">Discover how our customers are achieving remarkable results with the help of our solutions.</p>
         <div className="inline-block justify-center items-center bg-transparent w-[80%] rounded-2xl mt-2 overflow-hidden">
-        <ReactPlayer url={'https://www.youtube.com/watch?v=LXb3EKWsInQ'} className
+        <ReactPlayer url={'https://youtu.be/HPVfdg86lOc?si=m7K27qv7_7-eahzY'} className
         ='rounded' width={'100%'} height={`${size <= 600 ?'300px':'520px'}`} style={{borderRadius:`20px`}}/>
         </div>
     {/* <div className="flex flex-col mx-auto space-y-4 justify-center items-center">

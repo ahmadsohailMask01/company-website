@@ -6,6 +6,7 @@ import { useRouter } from "next/navigation";
 import { IoIosCloudOutline } from "react-icons/io";
 import { FaRegLightbulb } from "react-icons/fa";
 import { HiOutlineWrenchScrewdriver } from "react-icons/hi2";
+import { MdCloudQueue } from "react-icons/md";
 
 const Services = () => {
   const router = useRouter();
@@ -36,7 +37,7 @@ const Services = () => {
                 ref: icon1
               },
               {
-                icon: IoIosCloudOutline,
+                icon: MdCloudQueue,
                 title: "Cloud Solutions",
                 description:
                   "We provide secure cloud services to store, manage, and access data.",

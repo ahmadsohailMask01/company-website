@@ -42,7 +42,7 @@ const Industries = () => {
                 '>Education & Training</p>
             </div>
         </div>
-        <div className='bg-[#2f7af7] px-4 py-2 rounded-[100px]'>
+        <div className='bg-[#2f7af7] px-4 py-2 rounded-[100px] hover:bg-[#255fc1] transition-all duration-300'>
             <Button label='Explore more industries' className='cursor-pointer text-white'/>
         </div>
         </section>
