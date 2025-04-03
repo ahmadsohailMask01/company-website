@@ -16,7 +16,7 @@ const Footer = () => {
   ];
   return (
     <footer className="bg-[#002049] text-white py-10 font-poppins">
-      <div className="container mx-auto px-5 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 justify-center gap-8">
+      <div className=" mx-12  grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 justify-center gap-8">
         <div className="flex flex-col space-y-4 items-start lg:ml-4">
           {/* Address */}
           <div className="lg:ml-12">

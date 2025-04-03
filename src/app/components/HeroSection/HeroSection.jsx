@@ -34,7 +34,7 @@ const HeroSection = () => {
             />
           </div>
         </div>
-        <div className="flex flex-col space-y-1 justify-center lg:w-full lg:flex-row lg:gap-20">
+        <div className="flex flex-col space-y-1 justify-center lg:w-[87%] lg:mx-40 lg:flex-row lg:justify-between">
           <StaticDataCard
             text={95}
             value={91}

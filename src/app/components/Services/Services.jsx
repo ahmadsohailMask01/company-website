@@ -26,7 +26,7 @@ const Services = () => {
           <p className="text-base lg:w-[36%] font-light flex self-center">
             {heading}
           </p>
-          <div className="mt-6 grid grid-cols-1 md:grid-cols-3 justify-center lg:ml-40 lg:mr-40 gap-12">
+          <div className="mt-6 grid grid-cols-1 md:grid-cols-3 justify-center lg:ml-21 lg:mr-21 gap-12">
             {[
               {
                 icon: FaRegLightbulb,
