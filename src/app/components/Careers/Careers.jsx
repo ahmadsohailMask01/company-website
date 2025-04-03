@@ -14,11 +14,15 @@ const Careers = () => {
     "Custom Development",
   ];
   const category = useRef();
-  const className = "px-4 py-2 border rounded w-[100%] bg-white";
+  const className = "px-4 py-2 border border-gray-300 rounded w-[100%] bg-white";
   return (
     <>
-      <section className="w-full pt-[74px]">
-        <div className="flex justify-center items-center py-4 bg-[#002049] mx-28 gap-4 border rounded-2xl">
+      <section className="w-full pt-[74px] font-poppins">
+        <div className="flex flex-col items-center justify-center text-white mx-28 py-4 lg:min-h-[320px] rounded-2xl bg-[#002049]">
+          <span className="font-extrabold text-4xl mb-8">Where <span className="text-[#2f7af7]">Passion</span> Meets Profession!</span>
+          <span className="w-[60%] text-center font-light">Do what you love, and make an impact! Join a team of like-minded professionals and take your career to the next level with us.</span>
+        </div>
+        <div className="flex justify-center items-center py-4 bg-white mx-32 border-gray-300 border gap-4 mt-[-40px] rounded-2xl">
           <div>
             <Select options={selectOneOptions} className={className} name='category' ref={category} />
           </div>
@@ -31,7 +35,7 @@ const Careers = () => {
           <div>
             <Select options={selectFourOptions} className={className} />
           </div>
-          <div className="flex items-center border bg-white rounded px-4 py-2">
+          <div className="flex items-center border border-gray-300 bg-white rounded px-4 py-2">
             <input
               type="text"
               name="search"

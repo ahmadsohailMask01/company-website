@@ -1,5 +1,5 @@
 'use client'
-import React from 'react'
+import React, { useRef } from 'react'
 import Button from '../Button/Button'
 import { useRouter } from 'next/navigation'
 
@@ -8,11 +8,12 @@ const CareerList = ({jobId, jobTitle, jobAddress}, ref) => {
   const jobInfo = [
     {title:'SQA Engineer', address:'Lahore, Punjab, Pakistan'}
   ]
+  const titleRef = useRef();
   return (
     <>
-    <div className='flex px-4 py-2 justify-between items-center w-full border-l border-[#2f7af7] hover:border-l-4 transition-all duration-150 cursor-pointer' key={jobId}>
+    <div className='flex px-4 py-2 justify-between items-center w-full border-l border-[#2f7af7] hover:border-l-4 transition-all duration-150 cursor-pointer' key={jobId} onMouseOver={()=>titleRef.current.style.color = '#2f7af7'} onMouseOut={()=>titleRef.current.style.color = 'black'}>
       <div className='flex flex-col justify-center items-start space-y-2'>
-        <span>{jobTitle}</span>
+        <span className='font-bold' ref={titleRef}>{jobTitle}</span>
         <span>{jobAddress}</span>
       </div>
       <div>
