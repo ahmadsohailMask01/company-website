@@ -3,6 +3,7 @@ import React from "react";
 import { useRouter } from "next/navigation";
 import Button from "../Button/Button";
 import StaticDataCard from "../StaticDataCard/StaticDataCard";
+import FloatingGetDown from "../FloatingGetDown";
 
 const HeroSection = () => {
   const router = useRouter();
@@ -54,6 +55,7 @@ const HeroSection = () => {
             description={"Client Feedback"}
           />
         </div>
+        <FloatingGetDown/>
       </section>
     </>
   );

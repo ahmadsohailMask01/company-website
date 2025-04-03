@@ -1,6 +1,6 @@
-'use client'
-import React, {useEffect, useRef} from "react";
-import { BsFillArrowDownSquareFill } from "react-icons/bs";
+"use client";
+import React, { useEffect, useRef } from "react";
+import { RiArrowDownSFill } from "react-icons/ri";
 
 const FloatingGetDown = () => {
   const getDownDiv = useRef();
@@ -18,12 +18,9 @@ const FloatingGetDown = () => {
   }, []);
   return (
     <>
-      <div
-        className="flex justify-between items-center gap-4 fixed left-1/2 transform -translate-x-1/2 -translate-y-1/2 bottom-6 text-2xl transition-opacity duration-300"
-        ref={getDownDiv}
-      >
-        <BsFillArrowDownSquareFill className="animate-bounce text-[#2f7af7]" />
-        <p className="text-[#2f7af7] animate-pulse">Let's get going</p>
+      <div className="flex flex-col justify-center items-center absolute bottom-8 transition-opacity duration-300" ref={getDownDiv}>
+        <p className="text-black">Scroll down</p>
+        <RiArrowDownSFill className="text-black animate-bounce" />
       </div>
     </>
   );
