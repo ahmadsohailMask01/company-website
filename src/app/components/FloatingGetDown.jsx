@@ -1,6 +1,7 @@
 "use client";
 import React, { useEffect, useRef } from "react";
 import { RiArrowDownSFill } from "react-icons/ri";
+import 'animate.css'
 
 const FloatingGetDown = () => {
   const getDownDiv = useRef();
@@ -20,7 +21,7 @@ const FloatingGetDown = () => {
     <>
       <div className="flex flex-col justify-center items-center absolute bottom-8 transition-opacity duration-300" ref={getDownDiv}>
         <p className="text-black">Scroll down</p>
-        <RiArrowDownSFill className="text-black animate-bounce" />
+        <RiArrowDownSFill className="text-black animate__animated animate__infinite animate__bounce animate__slow" />
       </div>
     </>
   );
