@@ -15,7 +15,7 @@ const Careers = () => {
     "Custom Development",
   ];
   const category = useRef(null);
-  const className = "w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:ring-2 focus:ring-[#2f7af7] focus:outline-none focus:border-blue-500 bg-white text-gray-700";
+  const className = "w-90 md:w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:ring-2 focus:ring-[#2f7af7] focus:outline-none focus:border-blue-500 bg-white text-gray-700";
   const handleSelectionChange = () => {
     console.log(category.current.value);
   }
@@ -27,9 +27,9 @@ const Careers = () => {
           <span className="w-[55%] text-center font-light">Do what you love, and make an impact! Join a team of like-minded professionals & take your career to the next level with us.</span>
     
         </div>
-        <div className="flex flex-col justify-center items-center py-4 bg-white mx-64 border-gray-300 border gap-4 mt-[-40px] rounded ">
+        <div className="flex flex-col justify-center items-center py-4 bg-white lg:mx-64 border-gray-300 border gap-4 mt-[-40px] rounded ">
           <span className="font-bold text-4xl my-4">Opportunities</span>
-          <div className="flex justify-center items-center gap-1" >
+          <div className="flex flex-col space-y-2 md:space-y-0 md:flex-row justify-center items-center md:gap-1" >
           <div>
             <Select options={selectOneOptions} onChange={handleSelectionChange} className={className} name='category' ref={category} />
           </div>
