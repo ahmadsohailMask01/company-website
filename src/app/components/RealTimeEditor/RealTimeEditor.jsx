@@ -13,6 +13,7 @@ export default function RealTimeEditor({name, control, label, defaultValue =""})
     control={control}
     render={({field: {onChange}}) => (
         <Editor
+        apiKey='sizhi80lshq1zzg6vanrprzsdoam2xqg4vo2plv1wh0w6vrs'
         initialValue={defaultValue}
         init={{
             initialValue: defaultValue,
