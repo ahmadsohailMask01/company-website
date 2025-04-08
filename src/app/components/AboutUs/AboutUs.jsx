@@ -9,11 +9,11 @@ export default function AboutPage() {
         <div className="absolute top-0 left-0 w-80 h-80 bg-white opacity-10 rounded-full blur-3xl animate-pulse" />
         <div className="absolute bottom-0 right-0 w-96 h-96 bg-white opacity-10 rounded-full blur-3xl animate-pulse" />
         <div className="relative max-w-4xl mx-auto text-center">
-          <h1 className="text-4xl font-medium mb-4 animate__animated animate__fadeInDown tracking-wide">
+          <h1 className="text-4xl font-medium mb-4  tracking-wide">
             Tech That <span className="text-[#2f7af7]">Transforms</span>.
             Solutions That <span className="text-[#2f7af7]">Scale.</span>
           </h1>
-          <p className="text-lg font-light animate__animated animate__fadeInUp animate__delay-1s">
+          <p className="text-lg font-light animate__delay-1s">
             Biafotech stands as a beacon of excellence, offering a comprehensive
             suite of services. Our technology-agnostic approach allows us to
             provide cutting-edge solutions tailored to your business needs.
