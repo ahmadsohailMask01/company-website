@@ -69,7 +69,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Journey Section */}
+      {/* Journey Section
       <section className="bg-white py-20 px-6">
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-24 items-center">
           <div className="">
@@ -80,6 +80,33 @@ export default function AboutPage() {
             <p className="text-base font-light text-justify leading-relaxed text-gray-700">
             Our journey began out of necessity, recognizing a lack of specific expertise in the country. Fueled by this need, we assembled a dedicated team of consultants and business analysts ready to absorb knowledge. In a remarkable feat, we rescued a project within a record 4 months, birthing Biafotech with a vision to elevate standards and professionalism in our industry. Fueled by the fire of perfection and professionalism, our journey since 2017 has propelled us to become a distinguished consultancy in the market. We take pride in directly serving over 90,000 students through our system and processing over 1,000,000 applicants every six months.
             </p>
+          </div>
+        </div>
+      </section> */}
+
+      {/* Journey Section with Snake-Line Checkpoints */}
+      <section className="bg-[#002049] pt-8 pb-2 px-6">
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-4xl font-bold text-white mb-10 text-center">Our <span className="text-[#2f7af7]">Journey</span></h2>
+          <div className="flex flex-col md:flex-row gap-8 lg:gap-36 justify-center items-center">
+            <img src="https://extension.harvard.edu/wp-content/uploads/sites/8/2024/01/Goal-Setting.jpg" alt="Journey graphic" className="w-full md:w-1/2 rounded-2xl shadow-lg object-cover" />
+            <div className="relative w-full md:w-1/2">
+              <div className="border-l-4 border-white mt-10 pl-6 ml-2">
+                {[
+                  { year: "2017", text: "Establishment. Incorporation with SECP and opening of offices in Lahore, Pakistan." },
+                  { year: "2018 - 2020", text: "Launched logistics automation software." },
+                  { year: "2021", text: "Expansion in Karachi. Opened first office in Pakistan's largest city." },
+                  { year: "2022", text: "Released AI-powered analytics tools." },
+                  { year: "2023 & Beyond", text: "Leading digital transformation and ERP solutions." },
+                ].map((item, index) => (
+                  <div key={index} className="mb-10 relative">
+                    <div className="absolute -left-5 top-1 w-4 h-4 rounded-full bg-[#2f7af7] border-2 border-white"></div>
+                    <h4 className="text-lg font-semibold text-[#2f7af7]">{item.year}</h4>
+                    <p className="text-white text-sm">{item.text}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
           </div>
         </div>
       </section>
