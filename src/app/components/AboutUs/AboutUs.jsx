@@ -1,19 +1,23 @@
+'use client'
 import React from "react";
 import "animate.css";
+import Button from "../Button/Button";
+import { useRouter } from "next/navigation";
 
 export default function AboutPage() {
+  const router = useRouter();
   return (
     <div className="bg-[#f0f6ff] text-gray-800 font-poppins">
       {/* Hero Section */}
-      <section className="relative bg-[#002049] text-white pt-48 pb-48 px-6 overflow-hidden">
+      <section className="relative bg-[#002049] text-white py-36 px-6 overflow-hidden">
         <div className="absolute top-0 left-0 w-80 h-80 bg-white opacity-10 rounded-full blur-3xl animate-pulse" />
         <div className="absolute bottom-0 right-0 w-96 h-96 bg-white opacity-10 rounded-full blur-3xl animate-pulse" />
-        <div className="relative max-w-4xl mx-auto text-center">
-          <h1 className="text-4xl font-medium mb-4  tracking-wide">
+        <div className="flex flex-col items-start relative max-w-4xl mx-auto text-center">
+          <span className="text-4xl inline-block font-medium mb-6  tracking-wide">
             Tech That <span className="text-[#2f7af7]">Transforms</span>.
             Solutions That <span className="text-[#2f7af7]">Scale.</span>
-          </h1>
-          <p className="text-lg font-light animate__delay-1s">
+          </span>
+          <p className="text-base font-light max-w-4xl text-justify border-l border-gray-200 pl-4 mb-6">
             Biafotech stands as a beacon of excellence, offering a comprehensive
             suite of services. Our technology-agnostic approach allows us to
             provide cutting-edge solutions tailored to your business needs.
@@ -21,6 +25,7 @@ export default function AboutPage() {
             strategy and implementation, or specialized education and training,
             we excel in delivering solutions that drive success.
           </p>
+          <Button label='Get in Touch' className='bg-[#2f7af7] px-4 py-2 rounded cursor-pointer' onClick={()=>router.push('/get-in-touch')}/>
         </div>
 
         {/* Full-width Wave SVG */}
@@ -40,9 +45,9 @@ export default function AboutPage() {
       </section>
 
       {/* Mission Section */}
-      <section className="py-20 px-6 bg-gradient-to-b from-white via-[#e6f0ff] to-white">
+      <section className="pb-24 pt-18 px-6 bg-gradient-to-b from-white via-[#e6f0ff] to-white">
         <div className="max-w-5xl mx-auto text-center">
-          <h2 className="text-4xl font-bold text-[#2f7af7] mb-6">
+          <h2 className="text-4xl font-bold text-[#2f7af7] mb-8">
             Our Mission
           </h2>
           <p className="text-lg font-light leading-relaxed text-gray-700 max-w-3xl mx-auto ">
@@ -54,12 +59,54 @@ export default function AboutPage() {
         </div>
       </section>
 
+      {/* Our Values Section */}
+      <section className="py-12 pb-16 px-6 bg-[#255fc1]">
+        <div className="max-w-6xl mx-auto text-center">
+          <span className="text-4xl inline-block font-bold text-white mb-10">Our Core <span className="text-[#002049]">Values</span></span>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+            {[
+              {
+                title: "Integrity",
+                desc: "We uphold the highest standards of integrity in all our actions."
+              },
+              {
+                title: "Innovation",
+                desc: "We constantly strive for innovation in our processes and products."
+              },
+              {
+                title: "Customer Centricity",
+                desc: "Our clients are at the heart of everything we do."
+              },
+              {
+                title: "Collaboration",
+                desc: "We work together, across boundaries, to meet the needs of our customers."
+              },
+              {
+                title: "Excellence",
+                desc: "We pursue excellence in every project, big or small."
+              },
+              {
+                title: "Sustainability",
+                desc: "We are committed to sustainable practices that benefit our planet and future."
+              },
+            ].map((value, index) => (
+              <div key={index} className="bg-[#e3efff] scale-100 hover:scale-108
+               p-8 rounded-3xl shadow-lg transition-all duration-300">
+                <span className="text-2xl inline-block font-semibold text-[#2f7af7] mb-3">{value.title}</span>
+                <p className="text-gray-700">{value.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+
       {/* History Section */}
       <section className="bg-white py-20 px-6">
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-24 items-center">
-          <div className="">
-            <h2 className="text-4xl font-bold text-[#2f7af7] mb-4">Our Story</h2>
-            <p className="text-base font-light text-justify text-gray-700">
+          <div className="flex flex-col justify-center">
+            <span className="text-4xl inline-block font-bold text-[#2f7af7] mb-8">Our Story</span>
+            <p className="text-base font-light text-justify text-gray-700 leading-7">
             Biafotech draws inspiration from the majestic Biafo Glacier, a 67 km wonder in Pakistan's Karakoram Mountain range. Much like this glacier, part of the world's longest glacial system, we embody resilience and endurance. Biafotech stands as a beacon of excellence, offering a comprehensive suite of services. Our technology-agnostic approach allows us to provide cutting-edge solutions tailored to your business needs. With a primary focus on SAP, Biafotech is proud to be a Gold Partner of SAP, showcasing our unparalleled expertise in SAP solutions. From business transformation to project implementations, ERP rollouts, upgrades, and support, our dedicated teams ensure that your organization thrives in the ever-evolving technological landscape.
             </p>
           </div>
@@ -84,13 +131,13 @@ export default function AboutPage() {
         </div>
       </section> */}
 
-      {/* Journey Section with Snake-Line Checkpoints */}
-      <section className="bg-[#002049] pt-8 pb-2 px-6">
-        <div className="max-w-7xl mx-auto">
-          <h2 className="text-4xl font-bold text-white mb-10 text-center">Our <span className="text-[#2f7af7]">Journey</span></h2>
+      {/* Journey Section */}
+      <section className="bg-[#002049] pt-12 py-8 px-6">
+        <div className="max-w-7xl mx-auto text-center">
+          <span className="text-4xl inline-block font-bold text-white mb-8 lg:mb-2 text-center">Our <span className="text-[#2f7af7]">Journey</span></span>
           <div className="flex flex-col md:flex-row gap-8 lg:gap-36 justify-center items-center">
-            <img src="https://extension.harvard.edu/wp-content/uploads/sites/8/2024/01/Goal-Setting.jpg" alt="Journey graphic" className="w-full md:w-1/2 rounded-2xl shadow-lg object-cover" />
-            <div className="relative w-full md:w-1/2">
+            <img src="https://extension.harvard.edu/wp-content/uploads/sites/8/2024/01/Goal-Setting.jpg" alt="Journey graphic" className="w-full md:w-1/2 rounded-2xl shadow-lg object-cover border-4 border-white" />
+            <div className="relative w-full md:w-1/2 text-start">
               <div className="border-l-4 border-white mt-10 pl-6 ml-2">
                 {[
                   { year: "2017", text: "Establishment. Incorporation with SECP and opening of offices in Lahore, Pakistan." },
@@ -112,12 +159,12 @@ export default function AboutPage() {
       </section>
 
       {/* What We Do Section */}
-      <section className="bg-white py-20 px-6">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold text-center text-[#2f7af7] mb-16 ">
+      <section className="bg-white py-14 px-6">
+        <div className="max-w-6xl mx-auto text-center">
+          <span className="text-4xl inline-block font-bold text-center text-[#2f7af7] mb-12 ">
             What We Do
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 place-items-center gap-42">
+          </span>
+          <div className="grid px-4 md:p-2 lg:p-0 grid-cols-1 md:grid-cols-3 place-items-center gap-8 lg:gap-42">
             {[
               {
                 title: "Web Development",
@@ -134,7 +181,7 @@ export default function AboutPage() {
             ].map((item, i) => (
               <div
                 key={i}
-                className="flex flex-col bg-[#e3efff] w-100 min-h-[240px] justify-center p-8 rounded-3xl shadow-lg text-center transition-all duration-300 "
+                className="flex flex-col bg-[#e3efff] lg:w-100 min-h-[240px] justify-center p-8 rounded-3xl shadow-lg text-center transition-all duration-300 "
               >
                 <h3 className="text-2xl font-semibold mb-3 text-[#2f7af7]">
                   {item.title}
