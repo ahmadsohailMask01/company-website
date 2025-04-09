@@ -159,7 +159,7 @@ export default function AboutPage() {
       </section>
 
       {/* What We Do Section */}
-      <section className="bg-white py-14 px-6">
+      <section className="bg-white py-14 pb-16 px-6">
         <div className="max-w-6xl mx-auto text-center">
           <span className="text-4xl inline-block font-bold text-center text-[#2f7af7] mb-12 ">
             What We Do
