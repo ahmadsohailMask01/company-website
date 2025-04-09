@@ -61,9 +61,9 @@ export default function AboutPage() {
 
       {/* Our Values Section */}
       <section className="py-12 pb-16 px-6 bg-[#255fc1]">
-        <div className="max-w-6xl mx-auto text-center">
+        <div className="max-w-7xl mx-auto text-center">
           <span className="text-4xl inline-block font-bold text-white mb-10">Our Core <span className="text-[#002049]">Values</span></span>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-10 lg:gap-20">
             {[
               {
                 title: "Integrity",
@@ -90,7 +90,7 @@ export default function AboutPage() {
                 desc: "We are committed to sustainable practices that benefit our planet and future."
               },
             ].map((value, index) => (
-              <div key={index} className="bg-[#e3efff] scale-100 hover:scale-108
+              <div key={index} className="bg-[#e3efff] scale-100 lg:scale-110 hover:scale-108 lg:hover:scale-115
                p-8 rounded-3xl shadow-lg transition-all duration-300">
                 <span className="text-2xl inline-block font-semibold text-[#2f7af7] mb-3">{value.title}</span>
                 <p className="text-gray-700">{value.desc}</p>
