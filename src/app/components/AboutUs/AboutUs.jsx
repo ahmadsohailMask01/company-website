@@ -63,7 +63,7 @@ export default function AboutPage() {
       <section className="py-12 pb-16 px-6 bg-[#255fc1]">
         <div className="max-w-7xl mx-auto text-center">
           <span className="text-4xl inline-block font-bold text-white mb-10">Our Core <span className="text-[#002049]">Values</span></span>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-10 lg:gap-20">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-10 lg:gap-20 lg:gap-y-16">
             {[
               {
                 title: "Integrity",
