@@ -1,4 +1,4 @@
-'use client'
+"use client";
 import React from "react";
 import "animate.css";
 import Button from "../Button/Button";
@@ -25,7 +25,11 @@ export default function AboutPage() {
             strategy and implementation, or specialized education and training,
             we excel in delivering solutions that drive success.
           </p>
-          <Button label='Get in Touch' className='bg-[#2f7af7] px-4 py-2 rounded cursor-pointer' onClick={()=>router.push('/get-in-touch')}/>
+          <Button
+            label="Get in Touch"
+            className="bg-[#2f7af7] px-4 py-2 rounded cursor-pointer"
+            onClick={() => router.push("/get-in-touch")}
+          />
         </div>
 
         {/* Full-width Wave SVG */}
@@ -47,9 +51,9 @@ export default function AboutPage() {
       {/* Mission Section */}
       <section className="pb-24 pt-18 px-6 bg-gradient-to-b from-white via-[#e6f0ff] to-white">
         <div className="max-w-5xl mx-auto text-center">
-          <h2 className="text-4xl font-bold text-[#2f7af7] mb-8">
+          <span className="text-4xl inline-block font-bold text-[#2f7af7] mb-8">
             Our Mission
-          </h2>
+          </span>
           <p className="text-lg font-light leading-relaxed text-gray-700 max-w-3xl mx-auto ">
             At Biafotech, we strive to be at the forefront of digital
             transformation by delivering scalable, sustainable, and smart
@@ -62,37 +66,44 @@ export default function AboutPage() {
       {/* Our Values Section */}
       <section className="py-12 pb-16 px-6 bg-[#255fc1]">
         <div className="max-w-7xl mx-auto text-center">
-          <span className="text-4xl inline-block font-bold text-white mb-10">Our Core <span className="text-[#002049]">Values</span></span>
+          <span className="text-4xl inline-block font-bold text-white mb-10">
+            Our Core <span className="text-[#002049]">Values</span>
+          </span>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-10 lg:gap-20 lg:gap-y-16">
             {[
               {
                 title: "Integrity",
-                desc: "We uphold the highest standards of integrity in all our actions."
+                desc: "We uphold the highest standards of integrity in all our actions.",
               },
               {
                 title: "Innovation",
-                desc: "We constantly strive for innovation in our processes and products."
+                desc: "We constantly strive for innovation in our processes and products.",
               },
               {
                 title: "Customer Centricity",
-                desc: "Our clients are at the heart of everything we do."
+                desc: "Our clients are at the heart of everything we do.",
               },
               {
                 title: "Collaboration",
-                desc: "We work together, across boundaries, to meet the needs of our customers."
+                desc: "We work together, across boundaries, to meet the needs of our customers.",
               },
               {
                 title: "Excellence",
-                desc: "We pursue excellence in every project, big or small."
+                desc: "We pursue excellence in every project, big or small.",
               },
               {
                 title: "Sustainability",
-                desc: "We are committed to sustainable practices that benefit our planet and future."
+                desc: "We are committed to sustainable practices that benefit our planet and future.",
               },
             ].map((value, index) => (
-              <div key={index} className="bg-[#e3efff] scale-100 lg:scale-110 hover:scale-108 lg:hover:scale-115
-               p-8 rounded-3xl shadow-lg transition-all duration-300">
-                <span className="text-2xl inline-block font-semibold text-[#2f7af7] mb-3">{value.title}</span>
+              <div
+                key={index}
+                className="bg-[#e3efff] scale-100 lg:scale-110 hover:scale-108 lg:hover:scale-115
+               p-8 rounded-3xl shadow-lg transition-all duration-300"
+              >
+                <span className="text-2xl inline-block font-semibold text-[#2f7af7] mb-3">
+                  {value.title}
+                </span>
                 <p className="text-gray-700">{value.desc}</p>
               </div>
             ))}
@@ -100,18 +111,34 @@ export default function AboutPage() {
         </div>
       </section>
 
-
       {/* History Section */}
       <section className="bg-white py-20 px-6">
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-24 items-center">
           <div className="flex flex-col justify-center">
-            <span className="text-4xl inline-block font-bold text-[#2f7af7] mb-8">Our Story</span>
+            <span className="text-4xl inline-block font-bold text-[#2f7af7] mb-8">
+              Our Story
+            </span>
             <p className="text-base font-light text-justify text-gray-700 leading-7">
-            Biafotech draws inspiration from the majestic Biafo Glacier, a 67 km wonder in Pakistan's Karakoram Mountain range. Much like this glacier, part of the world's longest glacial system, we embody resilience and endurance. Biafotech stands as a beacon of excellence, offering a comprehensive suite of services. Our technology-agnostic approach allows us to provide cutting-edge solutions tailored to your business needs. With a primary focus on SAP, Biafotech is proud to be a Gold Partner of SAP, showcasing our unparalleled expertise in SAP solutions. From business transformation to project implementations, ERP rollouts, upgrades, and support, our dedicated teams ensure that your organization thrives in the ever-evolving technological landscape.
+              Biafotech draws inspiration from the majestic Biafo Glacier, a 67
+              km wonder in Pakistan's Karakoram Mountain range. Much like this
+              glacier, part of the world's longest glacial system, we embody
+              resilience and endurance. Biafotech stands as a beacon of
+              excellence, offering a comprehensive suite of services. Our
+              technology-agnostic approach allows us to provide cutting-edge
+              solutions tailored to your business needs. With a primary focus on
+              SAP, Biafotech is proud to be a Gold Partner of SAP, showcasing
+              our unparalleled expertise in SAP solutions. From business
+              transformation to project implementations, ERP rollouts, upgrades,
+              and support, our dedicated teams ensure that your organization
+              thrives in the ever-evolving technological landscape.
             </p>
           </div>
           <div className="">
-            <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d" alt="Our history" className="rounded-3xl shadow-lg w-full object-cover" />
+            <img
+              src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d"
+              alt="Our history"
+              className="rounded-3xl shadow-lg w-full object-cover"
+            />
           </div>
         </div>
       </section>
@@ -134,21 +161,44 @@ export default function AboutPage() {
       {/* Journey Section */}
       <section className="bg-[#002049] pt-12 py-8 px-6">
         <div className="max-w-7xl mx-auto text-center">
-          <span className="text-4xl inline-block font-bold text-white mb-8 lg:mb-2 text-center">Our <span className="text-[#2f7af7]">Journey</span></span>
+          <span className="text-4xl inline-block font-bold text-white mb-8 lg:mb-2 text-center">
+            Our <span className="text-[#2f7af7]">Journey</span>
+          </span>
           <div className="flex flex-col md:flex-row gap-8 lg:gap-36 justify-center items-center">
-            <img src="https://extension.harvard.edu/wp-content/uploads/sites/8/2024/01/Goal-Setting.jpg" alt="Journey graphic" className="w-full md:w-1/2 rounded-2xl shadow-lg object-cover border-4 border-white" />
+            <img
+              src="https://extension.harvard.edu/wp-content/uploads/sites/8/2024/01/Goal-Setting.jpg"
+              alt="Journey graphic"
+              className="w-full md:w-1/2 rounded-2xl shadow-lg object-cover border-4 border-white"
+            />
             <div className="relative w-full md:w-1/2 text-start">
               <div className="border-l-4 border-white mt-10 pl-6 ml-2">
                 {[
-                  { year: "2017", text: "Establishment. Incorporation with SECP and opening of offices in Lahore, Pakistan." },
-                  { year: "2018 - 2020", text: "Launched logistics automation software." },
-                  { year: "2021", text: "Expansion in Karachi. Opened first office in Pakistan's largest city." },
-                  { year: "2022", text: "Released AI-powered analytics tools." },
-                  { year: "2023 & Beyond", text: "Leading digital transformation and ERP solutions." },
+                  {
+                    year: "2017",
+                    text: "Establishment. Incorporation with SECP and opening of offices in Lahore, Pakistan.",
+                  },
+                  {
+                    year: "2018 - 2020",
+                    text: "Launched logistics automation software.",
+                  },
+                  {
+                    year: "2021",
+                    text: "Expansion in Karachi. Opened first office in Pakistan's largest city.",
+                  },
+                  {
+                    year: "2022",
+                    text: "Released AI-powered analytics tools.",
+                  },
+                  {
+                    year: "2023 & Beyond",
+                    text: "Leading digital transformation and ERP solutions.",
+                  },
                 ].map((item, index) => (
                   <div key={index} className="mb-10 relative">
                     <div className="absolute -left-5 top-1 w-4 h-4 rounded-full bg-[#2f7af7] border-2 border-white"></div>
-                    <h4 className="text-lg font-semibold text-[#2f7af7]">{item.year}</h4>
+                    <h4 className="text-lg font-semibold text-[#2f7af7]">
+                      {item.year}
+                    </h4>
                     <p className="text-white text-sm">{item.text}</p>
                   </div>
                 ))}
