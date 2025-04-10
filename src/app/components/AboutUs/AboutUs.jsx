@@ -5,19 +5,18 @@ import Button from "../Button/Button";
 import { useRouter } from "next/navigation";
 
 export default function AboutPage() {
+  
   const router = useRouter();
   return (
     <div className="bg-[#f0f6ff] text-gray-800 font-poppins">
       {/* Hero Section */}
       <section className="relative bg-[#002049] text-white py-36 px-6 overflow-hidden">
-        <div className="absolute z-1 top-0 left-0 w-50 h-50 bg-white opacity-10 rounded-full blur-3xl animate-pulse" />
-        <div className="absolute z-1 bottom-0 right-0 w-50 h-50 bg-white opacity-10 rounded-full blur-3xl animate-pulse" />
-        <div className="flex flex-col items-start relative max-w-4xl mx-auto text-center">
+        <div className="flex flex-col items-center relative max-w-4xl mx-auto text-center">
           <span className="text-4xl inline-block font-medium mb-6  tracking-wide">
             Tech That <span className="text-[#2f7af7]">Transforms</span>.
             Solutions That <span className="text-[#2f7af7]">Scale.</span>
           </span>
-          <p className="text-base font-light max-w-4xl text-justify border-l border-gray-200 pl-4 mb-6">
+          <p className="text-base font-light max-w-4xl text-center  mb-6">
             Biafotech stands as a beacon of excellence, offering a comprehensive
             suite of services. Our technology-agnostic approach allows us to
             provide cutting-edge solutions tailored to your business needs.
@@ -38,7 +37,7 @@ export default function AboutPage() {
           >
             <path
   fill="#002049"
-  fill-opacity="1"
+  fillOpacity="1"
   d="M0,192L120,165.3C240,139,480,85,720,85.3C960,85,1200,139,1320,165.3L1440,192L1440,0L1320,0C1200,0,960,0,720,0C480,0,240,0,120,0L0,0Z"
 />
           </svg>
@@ -140,70 +139,44 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Journey Section
-      <section className="bg-white py-20 px-6">
-        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-24 items-center">
-          <div className="">
-            <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c" alt="Our journey" className="rounded-3xl shadow-lg w-full object-cover" />
+      
+      <section className="py-16 text-center bg-[#f2f2f2] text-white">
+        <span className="inline-block font-bold text-4xl mb-12 text-[#2f7af7]">Our Journey</span>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div className="flex flex-col items-end space-y-16 justify-center">
+        <div className="flex flex-col items-start justify-center text-gray-900 md:w-100 h-[130px] px-4 py-2 rounded border-r-4 bg-white border-r-[#255fc1]">
+            <span className="font-medium text-[#2f7af7] text-lg">Establishment</span>
+            <span className="text-sm text-gray-500">2017</span>
+            <p className="font-light text-base text-start">Incorporation with SECP and opening of offices in Lahore, Pakistan.</p>
           </div>
-          <div className="">
-            <h2 className="text-4xl font-bold text-[#2f7af7] mb-6">Our Journey</h2>
-            <p className="text-base font-light text-justify leading-relaxed text-gray-700">
-            Our journey began out of necessity, recognizing a lack of specific expertise in the country. Fueled by this need, we assembled a dedicated team of consultants and business analysts ready to absorb knowledge. In a remarkable feat, we rescued a project within a record 4 months, birthing Biafotech with a vision to elevate standards and professionalism in our industry. Fueled by the fire of perfection and professionalism, our journey since 2017 has propelled us to become a distinguished consultancy in the market. We take pride in directly serving over 90,000 students through our system and processing over 1,000,000 applicants every six months.
-            </p>
+          <div className="flex flex-col items-start justify-center h-[130px] text-gray-900 md:w-100 px-4 py-2 rounded border-r-4 bg-white border-r-[#255fc1]">
+            <span className="font-medium text-[#2f7af7] text-lg">Business across multiple Domains</span>
+            <span className="text-sm text-gray-500">2018 - 2020</span>
+            <p className="font-light text-base text-start">Worked on many projects across multiple domains including Health & Care, Education etc.</p>
+          </div>
+          <div className="flex flex-col items-start justify-center text-gray-900 md:w-100 h-[130px] px-4 py-2 rounded border-r-4 bg-white border-r-[#255fc1]">
+            <span className="font-medium text-[#2f7af7] text-lg">Providing digital educational solutions</span>
+            <span className="text-sm text-gray-500">2022</span>
+            <p className="font-light text-start text-base">successfully completed multiple projects with leading educational institutions across Pakistan.</p>
           </div>
         </div>
-      </section> */}
+        <div className="flex flex-col items-start space-y-16 justify-center">
+        
+          <div className="flex flex-col items-start justify-center text-gray-900 h-[130px] md:w-100 px-4 py-2 rounded border-l-4 bg-white border-l-[#255fc1]">
+            <span className="font-medium text-[#2f7af7] text-lg">Expansion of Business in Karachi</span>
+            <span className="text-sm text-gray-500">2021</span>
+            <p className="font-light text-base text-start">Opened first office in Pakistan's largest city with high potential.</p>
+          </div>
+          <div className="flex flex-col items-start justify-center text-gray-900 h-[130px] md:w-100 px-4 py-2 rounded border-l-4 bg-white border-l-[#255fc1]">
+            <span className="font-medium text-[#2f7af7] text-lg">Taking Leadership across Domains</span>
+            <span className="text-sm text-gray-500">2023 & Beyond</span>
+            <p className="font-light text-base text-start">Leading digital transformation and ERP solutions.</p>
+          </div>
+        </div>
+      </div>
+    </section>
 
-      {/* Journey Section */}
-      <section className="bg-[#002049] pt-12 py-8 px-6">
-        <div className="max-w-7xl mx-auto text-center">
-          <span className="text-4xl inline-block font-bold text-white mb-8 lg:mb-2 text-center">
-            Our <span className="text-[#2f7af7]">Journey</span>
-          </span>
-          <div className="flex flex-col md:flex-row gap-8 lg:gap-36 justify-center items-center">
-            <img
-              src="https://extension.harvard.edu/wp-content/uploads/sites/8/2024/01/Goal-Setting.jpg"
-              alt="Journey graphic"
-              className="w-full md:w-1/2 rounded-2xl shadow-lg object-cover border-4 border-white"
-            />
-            <div className="relative w-full md:w-1/2 text-start">
-              <div className="border-l-4 border-white mt-10 pl-6 ml-2">
-                {[
-                  {
-                    year: "2017",
-                    text: "Establishment. Incorporation with SECP and opening of offices in Lahore, Pakistan.",
-                  },
-                  {
-                    year: "2018 - 2020",
-                    text: "Launched logistics automation software.",
-                  },
-                  {
-                    year: "2021",
-                    text: "Expansion in Karachi. Opened first office in Pakistan's largest city.",
-                  },
-                  {
-                    year: "2022",
-                    text: "Released AI-powered analytics tools.",
-                  },
-                  {
-                    year: "2023 & Beyond",
-                    text: "Leading digital transformation and ERP solutions.",
-                  },
-                ].map((item, index) => (
-                  <div key={index} className="mb-10 relative">
-                    <div className="absolute -left-5 top-1 w-4 h-4 rounded-full bg-[#2f7af7] border-2 border-white"></div>
-                    <h4 className="text-lg font-semibold text-[#2f7af7]">
-                      {item.year}
-                    </h4>
-                    <p className="text-white text-sm">{item.text}</p>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      
 
       {/* What We Do Section */}
       <section className="bg-white py-14 pb-16 px-6">
