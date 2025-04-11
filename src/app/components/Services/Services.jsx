@@ -18,15 +18,16 @@ const Services = () => {
     "Empowering business with innovative, high-performance digital solutions, that drive growth and efficiency";
   return (
     <>
-      <section className="flex text-center bg-[url(/images/services_bg.jpg)] bg-no-repeat bg-cover bg-center text-white ">
-        <div className="bg-[#002049]/90 p-8 flex flex-col justify-center items-center font-poppins" >
+      <section className="flex text-center  bg-no-repeat bg-cover bg-center text-gray-900 ">
+        <div className="bg-gradient-to-br from-[#f2f2f2] via-[#15a5df] to-[#f2f2f2] p-8 flex flex-col justify-center items-center font-poppins" >
+        <span className="inline-block text-sm text-gray-900 tracking-widest font-medium">Services</span>
           <p className="text-4xl font-extrabold  mb-4 ]">
             WHAT WE <font className="text-[#2f7af7]">OFFER</font>
           </p>
           <p className="text-base lg:w-[36%] font-light flex self-center">
             {heading}
           </p>
-          <div className="mt-6 grid grid-cols-1 md:grid-cols-3 justify-center lg:ml-21 lg:mr-21 gap-12">
+          <div className="mt-6 grid grid-cols-1 md:grid-cols-3 justify-center lg:ml-21 lg:mr-21">
             {[
               {
                 icon: FaRegLightbulb,
@@ -58,7 +59,7 @@ const Services = () => {
                 key={title}
                 onMouseOver={()=>ref.current.style.color='white'}
                 onMouseOut={()=>ref.current.style.color='#2f7af7'}
-                className={`flex flex-col p-8 justify-center border-b-8 border-[#2f7af7] items-center rounded-lg shadow-lg bg-white text-black hover:bg-[#2f7af7] hover:text-white transition-all duration-300`}
+                className={`flex flex-col p-8 ${itemNo==='1'?'rounded-bl-lg rounded-tl-lg':''} ${itemNo==='3'?'rounded-br-lg rounded-tr-lg':''} justify-center border-b-8 border-[#2f7af7] ${itemNo != '3'?'border-r border-r-gray-300':''} items-center shadow-lg bg-white text-black hover:bg-[#2f7af7] hover:text-white transition-all duration-300`}
               >
                 <Icon className={` text-[#2f7af7] text-6xl`} ref={ref} />
                 <p className="font-semibold my-4">{title}</p>
@@ -68,7 +69,7 @@ const Services = () => {
           </div>
           <Button
             label="View More Services"
-            className="px-4 py-2 bg-transparent mt-8 mb-2 w-[200px] rounded-[100px] text-white border-2 border-[#2f7af7] font-poppins font-medium cursor-pointer hover:bg-[#255fc1] hover:border-[#255fc1] transition-all duration-300"
+            className="px-4 py-2 bg-transparent mt-8 mb-2 w-[200px] rounded-[100px] text-gray-900 border-2 border-[#2f7af7] font-poppins font-medium cursor-pointer hover:bg-[#255fc1] hover:text-white hover:border-[#255fc1] transition-all duration-300"
             onClick={() => router.push("/services")}
           />
         </div>
