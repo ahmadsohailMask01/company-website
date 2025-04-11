@@ -1,28 +1,54 @@
-HeroSection curve --->  <div className="invisible md:visible absolute top-60 left-0 w-full overflow-hidden leading-[0]">
-          <svg
-            className="relative block w-[calc(100%+1.3px)] h-[100px]"
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 1200 100"
-            preserveAspectRatio="none"
-          >
-            <defs>
-              <linearGradient
-                id="waveGradient"
-                x1="0%"
-                y1="0%"
-                x2="100%"
-                y2="0%"
+<section className="w-full flex-col justify-center bg-[#f2f2f2] relative items-center">
+        {/* <span className="text-8xl md:absolute md:top-20 md:left-36 text-black font-bold font-mono inline-block">O<font className='text-[#2f7af7]'>u</font>r</span> */}
+        <div className="relative flex items-center justify-center p-4 min-h-[500px]">
+          {/* Central Circular Div */}
+          <div className="w-70 h-70 rounded-full bg-[#f2f2f2] border-16 border-[#2f7af7] text-black flex items-center justify-center text-4xl font-bold shadow-lg ">
+            <span className="text-center leading-10">
+              Our Core <span className="text-[#2f7af7]">Values</span>{" "}
+            </span>
+          </div>
+
+          {/* Icons around the circle */}
+          {icons.map((item, index) => {
+            const angle = (index / icons.length) * 2 * Math.PI;
+            const x = radius * Math.cos(angle);
+            const y = radius * Math.sin(angle);
+            const Icon = item.icon;
+
+            return (
+              <Popup
+                className="transition-all duration-300"
+                closeOnDocumentClick={false}
+                ref={(el) => (popupRefs.current[index] = el)}
+                key={item.id}
+                trigger={
+                  <button
+                    key={item.id}
+                    className="absolute flex justify-center items-center bg-white w-20 h-20 p-3 rounded-full shadow-md hover:bg-gray-100 transition cursor-pointer"
+                    style={{
+                      transform: `translate(${x}px, ${y}px)`,
+                    }}
+                    
+                  >
+                    <Icon className="text-blue-600 w-10 h-10" />
+                  </button>
+                }
+                position={`${
+                  item.id === 1 || item.id === 2 || item.id === 6
+                    ? "right center"
+                    : "left center"
+                }`}
+                contentStyle={{zIndex:0}}
               >
-                <stop offset="0%" stopColor="#1e3a8a" />
-                <stop offset="25%" stopColor="#23368c" />
-                <stop offset="50%" stopColor="#283289" />
-                <stop offset="75%" stopColor="#2d2f87" /> {/* blue-900 */}
-                <stop offset="100%" stopColor="#312c85" /> {/* indigo-900 */}
-              </linearGradient>
-            </defs>
-            <path
-              d="M0,0V30c50,30,150,70,300,70S550,40,700,30s250,40,500,40V0Z"
-              fill="url(#waveGradient)"
-            ></path>
-          </svg>
+                <div className="flex flex-col items-center relative justify-center bg-[#2f7af7] rounded-lg shadow-lg h-[150px] text-white px-4 py-2">
+                  <Icon type={item.icon} className="w-10 h-10" />
+                  <span className="font-medium text-2xl">
+                    {item.label}
+                  </span>{" "}
+                  <span className="font-light text-base">{item.text}</span>
+                </div>
+              </Popup>
+            );
+          })}
         </div>
+       </section>

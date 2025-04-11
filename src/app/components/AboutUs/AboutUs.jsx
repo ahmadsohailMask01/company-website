@@ -109,6 +109,7 @@ export default function AboutPage() {
         </div>
       </section>
 
+
       {/* Mission Section */}
       <section className="pb-24 pt-4 px-6 bg-gradient-to-b from-white via-[#e6f0ff] to-white">
         <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-8 mt-8 px-8">
@@ -147,7 +148,7 @@ export default function AboutPage() {
       </section>
 
       {/* Our Values Section */}
-      {/* <section className="py-12 pb-16 px-6 bg-[#f2f2f2]">
+      <section className="py-12 pb-16 px-6 bg-[#f2f2f2]">
         <div className="max-w-7xl mx-auto text-center">
           <span className="text-4xl inline-block font-bold text-black mb-10">
             Our Core <span className="text-[#2f7af7]">Values</span>
@@ -192,63 +193,10 @@ export default function AboutPage() {
             ))}
           </div>
         </div>
-      </section> */}
-
-
-      <section className="w-full flex-col justify-center bg-[#f2f2f2] relative items-center">
-        {/* <span className="text-8xl md:absolute md:top-20 md:left-36 text-black font-bold font-mono inline-block">O<font className='text-[#2f7af7]'>u</font>r</span> */}
-        <div className="relative flex items-center justify-center p-4 min-h-[500px]">
-          {/* Central Circular Div */}
-          <div className="w-70 h-70 rounded-full bg-[#f2f2f2] border-16 border-[#2f7af7] text-black flex items-center justify-center text-4xl font-bold shadow-lg ">
-            <span className="text-center leading-10">
-              Our Core <span className="text-[#2f7af7]">Values</span>{" "}
-            </span>
-          </div>
-
-          {/* Icons around the circle */}
-          {icons.map((item, index) => {
-            const angle = (index / icons.length) * 2 * Math.PI;
-            const x = radius * Math.cos(angle);
-            const y = radius * Math.sin(angle);
-            const Icon = item.icon;
-
-            return (
-              <Popup
-                className="transition-all duration-300"
-                closeOnDocumentClick={false}
-                ref={(el) => (popupRefs.current[index] = el)}
-                key={item.id}
-                trigger={
-                  <button
-                    key={item.id}
-                    className="absolute flex justify-center items-center bg-white w-20 h-20 p-3 rounded-full shadow-md hover:bg-gray-100 transition cursor-pointer"
-                    style={{
-                      transform: `translate(${x}px, ${y}px)`,
-                    }}
-                    
-                  >
-                    <Icon className="text-blue-600 w-10 h-10" />
-                  </button>
-                }
-                position={`${
-                  item.id === 1 || item.id === 2 || item.id === 6
-                    ? "right center"
-                    : "left center"
-                }`}
-                contentStyle={{zIndex:0}}
-              >
-                <div className="flex flex-col items-center relative justify-center bg-[#2f7af7] rounded-lg shadow-lg h-[150px] text-white px-4 py-2">
-                  <Icon type={item.icon} className="w-10 h-10" />
-                  <span className="font-medium text-2xl">
-                    {item.label}
-                  </span>{" "}
-                  <span className="font-light text-base">{item.text}</span>
-                </div>
-              </Popup>
-            );
-          })}
-        </div>
       </section>
+
+
+       
       {/* History Section */}
       <section className="bg-white py-20 px-6">
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-24 items-center">
