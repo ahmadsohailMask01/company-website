@@ -199,7 +199,7 @@ export default function AboutPage() {
         {/* <span className="text-8xl md:absolute md:top-20 md:left-36 text-black font-bold font-mono inline-block">O<font className='text-[#2f7af7]'>u</font>r</span> */}
         <div className="relative flex items-center justify-center p-4 min-h-[500px]">
           {/* Central Circular Div */}
-          <div className="w-70 h-70 rounded-full bg-[#f2f2f2] border-16 border-[#2f7af7] text-black flex items-center justify-center text-4xl font-bold shadow-lg z-0">
+          <div className="w-70 h-70 rounded-full bg-[#f2f2f2] border-16 border-[#2f7af7] text-black flex items-center justify-center text-4xl font-bold shadow-lg ">
             <span className="text-center leading-10">
               Our Core <span className="text-[#2f7af7]">Values</span>{" "}
             </span>
@@ -225,6 +225,7 @@ export default function AboutPage() {
                     style={{
                       transform: `translate(${x}px, ${y}px)`,
                     }}
+                    
                   >
                     <Icon className="text-blue-600 w-10 h-10" />
                   </button>
@@ -234,8 +235,9 @@ export default function AboutPage() {
                     ? "right center"
                     : "left center"
                 }`}
+                contentStyle={{zIndex:0}}
               >
-                <div className="flex flex-col items-center justify-center bg-[#2f7af7] rounded-lg shadow-lg h-[150px] text-white px-4 py-2">
+                <div className="flex flex-col items-center relative justify-center bg-[#2f7af7] rounded-lg shadow-lg h-[150px] text-white px-4 py-2">
                   <Icon type={item.icon} className="w-10 h-10" />
                   <span className="font-medium text-2xl">
                     {item.label}
