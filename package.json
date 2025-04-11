@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@fortawesome/react-fontawesome": "^0.2.2",
+    "@radix-ui/react-dialog": "^1.1.7",
     "@tinymce/tinymce-react": "^6.1.0",
     "animate.css": "^4.1.1",
     "framer-motion": "^12.6.2",
@@ -23,6 +24,7 @@
     "react-icons": "^5.5.0",
     "react-player": "^2.16.0",
     "react-slick": "^0.30.3",
+    "reactjs-popup": "^2.0.6",
     "slick-carousel": "^1.8.1"
   },
   "devDependencies": {

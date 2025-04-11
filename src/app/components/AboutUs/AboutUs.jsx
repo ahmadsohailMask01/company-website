@@ -1,10 +1,76 @@
 "use client";
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import "animate.css";
 import Button from "../Button/Button";
 import { useRouter } from "next/navigation";
+import {
+  LightbulbIcon,
+  Heart,
+  Target,
+  ShieldCheck,
+  Users,
+  Rocket,
+} from "lucide-react";
+import Popup from "reactjs-popup";
 
 export default function AboutPage() {
+  const coreValuesButtonRef = useRef(null);
+  const popupRefs = useRef([]);
+  useEffect(() => {
+    let index = 0;
+    const interval = setInterval(() => {
+      // Close previous popup
+      const prev = index === 0 ? icons.length - 1 : index - 1;
+      popupRefs.current[prev]?.close();
+
+      // Open current popup
+      popupRefs.current[index]?.open();
+
+      // Move to next index
+      index = (index + 1) % icons.length;
+    }, 2000); // show each for 2 seconds
+
+    return () => clearInterval(interval);
+  }, []);
+  const radius = 200;
+  const icons = [
+    {
+      id: 1,
+      label: "Innovation",
+      icon: LightbulbIcon,
+      text: "We value fresh thinking and creativity.",
+    },
+    {
+      id: 2,
+      label: "Compassion",
+      icon: Heart,
+      text: "Empathy and kindness guide our actions.",
+    },
+    {
+      id: 3,
+      label: "Focus",
+      icon: Target,
+      text: "We are goal-oriented and committed.",
+    },
+    {
+      id: 4,
+      label: "Integrity",
+      icon: ShieldCheck,
+      text: "Honesty and trust are key to our success.",
+    },
+    {
+      id: 5,
+      label: "Teamwork",
+      icon: Users,
+      text: "Collaboration is at the heart of our work.",
+    },
+    {
+      id: 6,
+      label: "Growth",
+      icon: Rocket,
+      text: "We strive for continuous improvement.",
+    },
+  ];
   const router = useRouter();
   return (
     <div className="bg-[#f0f6ff] text-gray-800 font-poppins">
@@ -47,34 +113,41 @@ export default function AboutPage() {
       <section className="pb-24 pt-4 px-6 bg-gradient-to-b from-white via-[#e6f0ff] to-white">
         <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-8 mt-8 px-8">
           <div className="flex justify-center items-center">
-            <img src="/images/vismis.webp" alt="mission-vision" className="w-[80%]"/>
+            <img
+              src="/images/vismis.webp"
+              alt="mission-vision"
+              className="w-[80%]"
+            />
           </div>
           <div className="flex flex-col space-y-8">
-        <div className="max-w-5xl mx-auto text-center scale-100 hover:scale-105 transition-all duration-300 bg-[#194b70] border border-gray-300 shadow-lg rounded-2xl px-4 py-8">
-          <span className="text-4xl inline-block font-bold text-white mb-4">
-            Our <span className="text-[#2f7af7]">Mission</span>
-          </span>
-          <p className="text-lg font-light leading-relaxed text-white max-w-3xl mx-auto ">
-            At Biafotech, we strive to be at the forefront of digital
-            transformation by delivering scalable, sustainable, and smart
-            solutions tailored to evolving industries. Innovation meets
-            execution in every project we take on.
-          </p>
-        </div>
-        <div className="max-w-5xl mx-auto text-center  bg-[#f2f2f2] scale-100 hover:scale-105 transition-all duration-300 shadow-lg border border-gray-300 rounded-2xl px-4 py-8">
-          <span className="text-4xl inline-block font-bold text-gray-900 mb-4">
-            Our <span className="text-[#2f7af7]">Vision</span>
-          </span>
-          <p className="text-lg font-light leading-relaxed text-gray-700 max-w-3xl mx-auto ">
-          Our vision is to revolutionize the digital landscape by delivering innovative, reliable, and scalable technology solutions that empower organizations to thrive in a connected world
-          </p>
-        </div>
-        </div>
+            <div className="max-w-5xl mx-auto text-center scale-100 hover:scale-105 transition-all duration-300 bg-[#194b70] border border-gray-300 shadow-lg rounded-2xl px-4 py-8">
+              <span className="text-4xl inline-block font-bold text-white mb-4">
+                Our <span className="text-[#2f7af7]">Mission</span>
+              </span>
+              <p className="text-lg font-light leading-relaxed text-white max-w-3xl mx-auto ">
+                At Biafotech, we strive to be at the forefront of digital
+                transformation by delivering scalable, sustainable, and smart
+                solutions tailored to evolving industries. Innovation meets
+                execution in every project we take on.
+              </p>
+            </div>
+            <div className="max-w-5xl mx-auto text-center  bg-[#f2f2f2] scale-100 hover:scale-105 transition-all duration-300 shadow-lg border border-gray-300 rounded-2xl px-4 py-8">
+              <span className="text-4xl inline-block font-bold text-gray-900 mb-4">
+                Our <span className="text-[#2f7af7]">Vision</span>
+              </span>
+              <p className="text-lg font-light leading-relaxed text-gray-700 max-w-3xl mx-auto ">
+                Our vision is to revolutionize the digital landscape by
+                delivering innovative, reliable, and scalable technology
+                solutions that empower organizations to thrive in a connected
+                world
+              </p>
+            </div>
+          </div>
         </div>
       </section>
 
       {/* Our Values Section */}
-      <section className="py-12 pb-16 px-6 bg-[#f2f2f2]">
+      {/* <section className="py-12 pb-16 px-6 bg-[#f2f2f2]">
         <div className="max-w-7xl mx-auto text-center">
           <span className="text-4xl inline-block font-bold text-black mb-10">
             Our Core <span className="text-[#2f7af7]">Values</span>
@@ -119,8 +192,61 @@ export default function AboutPage() {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
+
+      <section className="w-full flex-col justify-center bg-[#f2f2f2] relative items-center">
+        {/* <span className="text-8xl md:absolute md:top-20 md:left-36 text-black font-bold font-mono inline-block">O<font className='text-[#2f7af7]'>u</font>r</span> */}
+        <div className="relative flex items-center justify-center p-4 min-h-[500px]">
+          {/* Central Circular Div */}
+          <div className="w-70 h-70 rounded-full bg-[#f2f2f2] border-16 border-[#2f7af7] text-black flex items-center justify-center text-4xl font-bold shadow-lg z-0">
+            <span className="text-center leading-10">
+              Our Core <span className="text-[#2f7af7]">Values</span>{" "}
+            </span>
+          </div>
+
+          {/* Icons around the circle */}
+          {icons.map((item, index) => {
+            const angle = (index / icons.length) * 2 * Math.PI;
+            const x = radius * Math.cos(angle);
+            const y = radius * Math.sin(angle);
+            const Icon = item.icon;
+
+            return (
+              <Popup
+                className="transition-all duration-300"
+                closeOnDocumentClick={false}
+                ref={(el) => (popupRefs.current[index] = el)}
+                key={item.id}
+                trigger={
+                  <button
+                    key={item.id}
+                    className="absolute flex justify-center items-center bg-white w-20 h-20 p-3 rounded-full shadow-md hover:bg-gray-100 transition cursor-pointer"
+                    style={{
+                      transform: `translate(${x}px, ${y}px)`,
+                    }}
+                  >
+                    <Icon className="text-blue-600 w-10 h-10" />
+                  </button>
+                }
+                position={`${
+                  item.id === 1 || item.id === 2 || item.id === 6
+                    ? "right center"
+                    : "left center"
+                }`}
+              >
+                <div className="flex flex-col items-center justify-center bg-[#2f7af7] rounded-lg shadow-lg h-[150px] text-white px-4 py-2">
+                  <Icon type={item.icon} className="w-10 h-10" />
+                  <span className="font-medium text-2xl">
+                    {item.label}
+                  </span>{" "}
+                  <span className="font-light text-base">{item.text}</span>
+                </div>
+              </Popup>
+            );
+          })}
+        </div>
+      </section>
       {/* History Section */}
       <section className="bg-white py-20 px-6">
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-24 items-center">
@@ -159,12 +285,12 @@ export default function AboutPage() {
         </span>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div className="flex flex-col items-end relative space-y-16 justify-center md:border-r-2 md:pr-4 md:border-r-[#002049] border-dashed">
-            <div className="invisible md:visible absolute bg-[#2f7af7] w-5 h-5 top-13 right-[-11] rounded-[50%] border-2 border-gray-700"></div>
-            <div className=" invisible md:visible absolute bg-[#2f7af7] w-5 h-5 top-38 right-[-11] rounded-[50%] border-2 border-gray-700"></div>
-            <div className=" invisible md:visible absolute bg-[#2f7af7] w-5 h-5 bottom-45 right-[-11] rounded-[50%] border-2 border-gray-700"></div>
-            <div className=" invisible md:visible absolute bg-[#2f7af7] w-5 h-5 bottom-21 right-[-11] rounded-[50%] border-2 border-gray-700"></div>
-            <div className=" invisible md:visible absolute bg-[#2f7af7] w-5 h-5 bottom-[-10] right-[-11] rounded-[50%] border-2 border-gray-700"></div>
-            <div className="flex flex-col items-end justify-center text-gray-900 md:w-100 h-[130px] px-4 py-2 rounded border-r-4 bg-white border-r-[#255fc1]">
+            <div className="invisible md:visible absolute bg-[#2f7af7] w-5 h-5 top-13 right-[-11] rounded-[50%]"></div>
+            <div className=" invisible md:visible absolute bg-[#2f7af7] w-5 h-5 top-38 right-[-11] rounded-[50%] "></div>
+            <div className=" invisible md:visible absolute bg-[#2f7af7] w-5 h-5 bottom-45 right-[-11] rounded-[50%] "></div>
+            <div className=" invisible md:visible absolute bg-[#2f7af7] w-5 h-5 bottom-21 right-[-11] rounded-[50%] "></div>
+            <div className=" invisible md:visible absolute bg-[#2f7af7] w-5 h-5 bottom-[-10] right-[-11] rounded-[50%] "></div>
+            <div className="flex flex-col items-end justify-center text-gray-900 md:w-100 h-[130px] px-4 py-2 rounded border-r-4 bg-white border-r-black">
               <span className="font-medium text-[#2f7af7] text-lg">
                 Establishment
               </span>
@@ -174,47 +300,47 @@ export default function AboutPage() {
                 Pakistan.
               </p>
             </div>
-            <div className="flex flex-col items-end justify-center h-[130px] text-gray-900 md:w-100 px-4 py-2 rounded border-r-4 bg-white border-r-[#255fc1]">
+            <div className="flex flex-col items-end justify-center h-[130px] text-gray-900 md:w-100 px-4 py-2 rounded border-r-4 bg-white border-r-black">
               <span className="font-medium text-[#2f7af7] text-lg">
-              Expansion of Business in Karachi
+                Expansion of Business in Karachi
               </span>
-              <span className="text-sm text-gray-500 font-bold">
-                2021
-              </span>
+              <span className="text-sm text-gray-500 font-bold">2021</span>
               <p className="font-light text-base text-end">
-              Opened first office in Pakistan's largest city with high
-              potential.
+                Opened first office in Pakistan's largest city with high
+                potential.
               </p>
             </div>
-            <div className="flex flex-col items-end justify-center text-gray-900 md:w-100 h-[130px] px-4 py-2 rounded border-r-4 bg-white border-r-[#255fc1]">
+            <div className="flex flex-col items-end justify-center text-gray-900 md:w-100 h-[130px] px-4 py-2 rounded border-r-4 bg-white border-r-black">
               <span className="font-medium text-[#2f7af7] text-lg">
-              Taking Leadership across Domains
+                Taking Leadership across Domains
               </span>
-              <span className="text-sm text-gray-500 font-bold">2023 & Beyond</span>
+              <span className="text-sm text-gray-500 font-bold">
+                2023 & Beyond
+              </span>
               <p className="font-light text-end text-base">
-              Leading digital transformation and ERP solutions.
+                Leading digital transformation and ERP solutions.
               </p>
             </div>
           </div>
           <div className="flex flex-col items-start space-y-16 justify-center">
-            <div className="flex flex-col items-start justify-center text-gray-900 h-[130px] md:w-100 px-4 py-2 rounded border-l-4 bg-white border-l-[#255fc1]">
+            <div className="flex flex-col items-start justify-center text-gray-900 h-[130px] md:w-100 px-4 py-2 rounded border-l-4 bg-white border-l-black">
               <span className="font-medium text-[#2f7af7] text-lg">
-              Business across multiple Domains
+                Business across multiple Domains
               </span>
               <span className="text-sm text-gray-500 font-bold">2018-2020</span>
               <p className="font-light text-base text-start">
-              Worked on many projects across multiple domains including Health & Care, Education etc.
+                Worked on many projects across multiple domains including Health
+                & Care, Education etc.
               </p>
             </div>
-            <div className="flex flex-col items-start justify-center text-gray-900 h-[130px] md:w-100 px-4 py-2 rounded border-l-4 bg-white border-l-[#255fc1]">
+            <div className="flex flex-col items-start justify-center text-gray-900 h-[130px] md:w-100 px-4 py-2 rounded border-l-4 bg-white border-l-black">
               <span className="font-medium text-[#2f7af7] text-lg">
-              Providing digital educational solutions
+                Providing digital educational solutions
               </span>
-              <span className="text-sm text-gray-500 font-bold">
-                2022
-              </span>
+              <span className="text-sm text-gray-500 font-bold">2022</span>
               <p className="font-light text-base text-start">
-              Successfully completed multiple projects with leading educational institutions across Pakistan.
+                Successfully completed multiple projects with leading
+                educational institutions across Pakistan.
               </p>
             </div>
           </div>
