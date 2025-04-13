@@ -89,15 +89,12 @@ const Careers = () => {
     } else {
       const getFilteredJobs = jobs.filter((job) => {
         return city.current.value === "All Cities"
-          ? job.jobAddress
-              .toLowerCase()
-              .includes('') && province.current.value === 'All Provinces' ? 
-              job.jobAddress
-              .toLowerCase()
-              .includes(''):
-              job.jobAddress
-              .toLowerCase()
-              .includes(province.current.value.toLowerCase())
+          ? job.jobAddress.toLowerCase().includes("") &&
+            province.current.value === "All Provinces"
+            ? job.jobAddress.toLowerCase().includes("")
+            : job.jobAddress
+                .toLowerCase()
+                .includes(province.current.value.toLowerCase())
           : job.jobAddress
               .toLowerCase()
               .includes(city.current.value.toLowerCase());
@@ -118,9 +115,9 @@ const Careers = () => {
             professionals & take your career to the next level with us.
           </span>
         </div>
-        <div className="flex flex-col justify-center items-center py-4 bg-white lg:mx-64 border-gray-300 border gap-4 mt-[-40px] rounded ">
+        <div className="flex flex-col justify-center items-center py-4 bg-white mx-64 border-gray-300 border gap-4 mt-[-40px] rounded ">
           <span className="font-bold text-4xl my-4">Opportunities</span>
-          <div className="flex flex-col space-y-2 md:space-y-0 md:flex-row justify-center items-center md:gap-1">
+          <div className="flex flex-col space-y-2 md:space-y-0 md:flex-row mx-10 justify-center items-center md:gap-1">
             <div>
               <Select
                 options={selectOneOptions}
@@ -172,7 +169,7 @@ const Careers = () => {
               </button>
             </div>
           </div>
-          <div className="flex flex-col justify-center items-center space-y-1.5 w-full mx-28 py-4 px-8">
+          <div className="flex flex-col justify-center items-center space-y-1.5 w-full py-4 px-12 max-w-[1000px]">
             {filteredJobs.map((job) => {
               return (
                 <CareerList

@@ -23,7 +23,7 @@ const Header = () => {
       className={`bg-white/100 text-white border-b-1 border-[#F2F2F2] fixed z-1 font-poppins w-full rounded text-center`}
     >
       {/* Desktop Menu */}
-      <nav className="invisible flex px-28 py-4 justify-between gap-2 lg:visible w-full text-black">
+      <nav className="invisible flex px-28 lg:px-auto py-4 justify-between gap-2 lg:visible w-full text-black">
         <div className="flex w-40 ">
           <Link href="/">
             <img src="/images/biafo-v1.png" className=" w-20" />
