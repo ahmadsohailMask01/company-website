@@ -109,7 +109,6 @@ export default function AboutPage() {
         </div>
       </section>
 
-
       {/* Mission Section */}
       <section className="pb-24 pt-4 px-6 bg-gradient-to-b from-white via-[#e6f0ff] to-white">
         <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-8 mt-8 px-8">
@@ -153,50 +152,66 @@ export default function AboutPage() {
           <span className="text-4xl inline-block font-bold text-black mb-10">
             Our Core <span className="text-[#2f7af7]">Values</span>
           </span>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-10 lg:gap-20 lg:gap-y-16">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-x-10 gap-y-4">
             {[
               {
+                itemNo: 1,
                 title: "Integrity",
                 desc: "We uphold the highest standards of integrity in all our actions.",
               },
               {
+                itemNo: 2,
                 title: "Innovation",
                 desc: "We constantly strive for innovation in our processes and products.",
               },
               {
+                itemNo: 3,
                 title: "Customer Centricity",
                 desc: "Our clients are at the heart of everything we do.",
               },
               {
+                itemNo: 4,
                 title: "Collaboration",
                 desc: "We work together, across boundaries, to meet the needs of our customers.",
               },
               {
+                itemNo: 5,
                 title: "Excellence",
                 desc: "We pursue excellence in every project, big or small.",
               },
               {
+                itemNo: 6,
                 title: "Sustainability",
                 desc: "We are committed to sustainable practices that benefit our planet and future.",
               },
             ].map((value, index) => (
               <div
                 key={index}
-                className="bg-[#2f7af7] scale-100 lg:scale-110 hover:scale-108 lg:hover:scale-115
-               p-8 rounded-3xl shadow-lg transition-all duration-300"
+                className={`bg-[#2f7af7] w-100 scale-110
+               py-2 transition-all duration-300 ${
+                 value.itemNo === 1 ? "rounded-tl-2xl" : ""
+               } ${value.itemNo === 3 ? "rounded-tr-2xl" : ""}
+                ${value.itemNo === 4 ? "rounded-bl-2xl" : ""}
+                ${value.itemNo === 6 ? "rounded-br-2xl" : ""}`}
               >
-                <span className="text-2xl inline-block font-semibold text-white mb-3">
-                  {value.title}
-                </span>
-                <p className="text-[#f2f2f2]">{value.desc}</p>
+                <div
+                  className={`${
+                    value.itemNo === 3 || value.itemNo === 6
+                      ? ""
+                      : "border-r border-r-gray-400"
+                  } p-6`}
+                >
+                  <span className="text-2xl inline-block font-semibold text-white mb-3">
+                    {value.title}
+                  </span>
+                  <p className="text-[#f2f2f2]">{value.desc}</p>
+                </div>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-
-       
       {/* History Section */}
       <section className="bg-white py-20 px-6">
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-24 items-center">
