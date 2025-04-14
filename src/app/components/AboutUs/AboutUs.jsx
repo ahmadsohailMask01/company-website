@@ -130,7 +130,7 @@ export default function AboutPage() {
         </div>
         <div className="flex flex-col justify-center md:flex-row md:justify-between w-[88%]">
         <div>
-            <img src="/images/company_values.webp" alt="Company-Values" className="w-204" />
+            <img src="/images/company_vis.jpg" alt="Company-Vision" className="w-204 h-90" />
           </div>
           <div className="bg-[#2f7af7] flex flex-col items-center justify-center p-4">
           <span className="text-4xl inline-block font-bold text-white mb-4">
@@ -256,7 +256,7 @@ export default function AboutPage() {
             <div className=" invisible md:visible absolute bg-[#2f7af7] w-5 h-5 bottom-45 right-[-11] rounded-[50%] "></div>
             <div className=" invisible md:visible absolute bg-[#2f7af7] w-5 h-5 bottom-21 right-[-11] rounded-[50%] "></div>
             <div className=" invisible md:visible absolute bg-[#2f7af7] w-5 h-5 bottom-[-10] right-[-11] rounded-[50%] "></div>
-            <div className="flex flex-col w-[100%] items-start md:items-end justify-center text-gray-900 md:w-100 h-[130px] px-4 py-2 rounded md:border-r-4 bg-white md:border-r-black">
+            <div className="flex flex-col w-[100%] items-start md:items-end justify-center text-gray-900 md:w-100 md:h-[130px] px-4 py-2 rounded md:border-r-4 bg-white md:border-r-black">
               <span className="font-medium text-[#2f7af7] text-lg">
                 Establishment
               </span>
@@ -266,7 +266,7 @@ export default function AboutPage() {
                 Pakistan.
               </p>
             </div>
-            <div className="flex flex-col w-[100%] items-start md:items-end justify-center h-[130px] text-gray-900 md:w-100 px-4 py-2 rounded md:border-r-4 bg-white md:border-r-black">
+            <div className="flex flex-col w-[100%] items-start md:items-end justify-center md:h-[130px] text-gray-900 md:w-100 px-4 py-2 rounded md:border-r-4 bg-white md:border-r-black">
               <span className="font-medium text-[#2f7af7] text-lg">
                 Expansion of Business in Karachi
               </span>
@@ -276,7 +276,7 @@ export default function AboutPage() {
                 potential.
               </p>
             </div>
-            <div className="flex flex-col w-[100%] items-start md:items-end justify-center text-gray-900 md:w-100 h-[130px] px-4 py-2 rounded md:border-r-4 bg-white md:border-r-black">
+            <div className="flex flex-col w-[100%] items-start md:items-end justify-center text-gray-900 md:w-100 md:h-[130px] px-4 py-2 rounded md:border-r-4 bg-white md:border-r-black">
               <span className="font-medium text-[#2f7af7] text-lg">
                 Taking Leadership across Domains
               </span>
@@ -289,7 +289,7 @@ export default function AboutPage() {
             </div>
           </div>
           <div className="flex flex-col px-4 md:px-0 w-[100%] items-center md:items-start space-y-4 md:space-y-16 justify-center">
-            <div className="flex flex-col w-[100%] items-start justify-center text-gray-900 h-[130px] md:w-100 px-4 py-2 rounded md:border-l-4 bg-white md:border-l-black">
+            <div className="flex flex-col w-[100%] items-start justify-center text-gray-900 md:h-[130px] md:w-100 px-4 py-2 rounded md:border-l-4 bg-white md:border-l-black">
               <span className="font-medium text-[#2f7af7] text-lg">
                 Business across multiple Domains
               </span>
@@ -299,7 +299,7 @@ export default function AboutPage() {
                 & Care, Education etc.
               </p>
             </div>
-            <div className="flex flex-col w-[100%] items-start justify-center text-gray-900 h-[130px] md:w-100 px-4 py-2 rounded md:border-l-4 bg-white md:border-l-black">
+            <div className="flex flex-col w-[100%] items-start justify-center text-gray-900 md:h-[130px] md:w-100 px-4 py-2 rounded md:border-l-4 bg-white md:border-l-black">
               <span className="font-medium text-[#2f7af7] text-lg">
                 Providing digital educational solutions
               </span>
