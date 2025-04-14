@@ -67,7 +67,7 @@ const Careers = () => {
   const department = useRef(null);
   const search = useRef(null);
   const className =
-    "w-90 md:w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:ring-2 focus:ring-[#2f7af7] focus:outline-none focus:border-blue-500 bg-white text-gray-700";
+    "w-55 md:w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:ring-2 focus:ring-[#2f7af7] focus:outline-none focus:border-blue-500 bg-white text-gray-700";
 
   useEffect(() => {
     setFilteredJobs(jobs);
@@ -105,8 +105,8 @@ const Careers = () => {
   };
   return (
     <>
-      <section className="w-full pt-[74px] pb-8 bg-[#f2f2f2] font-poppins">
-        <div className="flex flex-col items-center justify-center text-white mx-28 py-4 lg:min-h-[320px] rounded-2xl bg-[#002049]">
+      <section className="w-full pt-[88px] lg:pt-[74px] pb-8 bg-[#f2f2f2] font-poppins">
+        <div className="flex flex-col items-center justify-center text-center text-white mx-6 md:mx-28 py-4 lg:min-h-[320px] rounded-2xl bg-[#002049]">
           <span className="font-medium text-4xl mb-4">
             Find your next <span className="text-[#2f7af7]">dream</span> job!{" "}
           </span>
@@ -115,9 +115,9 @@ const Careers = () => {
             professionals & take your career to the next level with us.
           </span>
         </div>
-        <div className="flex flex-col justify-center items-center py-4 bg-white mx-64 border-gray-300 border gap-4 mt-[-40px] rounded ">
+        <div className="flex flex-col justify-center items-center py-4 bg-white mx-12 md:mx-32 lg:mx-54 border-gray-300 border gap-4 mt-[-10px] lg:mt-[-40px] rounded ">
           <span className="font-bold text-4xl my-4">Opportunities</span>
-          <div className="flex flex-col space-y-2 md:space-y-0 md:flex-row mx-10 justify-center items-center md:gap-1">
+          <div className="flex flex-col w-100 md:w-full space-y-2 md:space-y-0 md:flex-row px-10 justify-center items-center md:gap-1">
             <div>
               <Select
                 options={selectOneOptions}

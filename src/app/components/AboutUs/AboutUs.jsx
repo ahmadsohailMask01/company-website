@@ -110,39 +110,40 @@ export default function AboutPage() {
       </section>
 
       {/* Mission Section */}
-      <section className="pb-24 pt-4 px-6 bg-gradient-to-b from-white via-[#e6f0ff] to-white">
-        <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-8 mt-8 px-8">
-          <div className="flex justify-center items-center">
-            <img
-              src="/images/vismis.webp"
-              alt="mission-vision"
-              className="w-[80%]"
-            />
-          </div>
-          <div className="flex flex-col space-y-8">
-            <div className="max-w-5xl mx-auto text-center scale-100 hover:scale-105 transition-all duration-300 bg-[#194b70] border border-gray-300 shadow-lg rounded-2xl px-4 py-8">
-              <span className="text-4xl inline-block font-bold text-white mb-4">
-                Our <span className="text-[#2f7af7]">Mission</span>
+      <section className="pb-24 pt-4 w-full bg-gradient-to-b from-white via-[#e6f0ff] to-white">
+        <div className="px-6 flex flex-col justify-center items-center">
+        <div className="flex flex-col justify-center md:flex-row md:justify-between w-[88%]">
+          <div className="bg-[#2f7af7] flex flex-col items-center justify-center p-4">
+          <span className="text-4xl inline-block font-bold text-white mb-4">
+                Our <span className="text-white">Mission</span>
               </span>
-              <p className="text-lg font-light leading-relaxed text-white max-w-3xl mx-auto ">
+              <p className="text-lg font-light leading-relaxed text-white text-center max-w-3xl mx-auto ">
                 At Biafotech, we strive to be at the forefront of digital
                 transformation by delivering scalable, sustainable, and smart
                 solutions tailored to evolving industries. Innovation meets
                 execution in every project we take on.
               </p>
-            </div>
-            <div className="max-w-5xl mx-auto text-center  bg-[#f2f2f2] scale-100 hover:scale-105 transition-all duration-300 shadow-lg border border-gray-300 rounded-2xl px-4 py-8">
-              <span className="text-4xl inline-block font-bold text-gray-900 mb-4">
-                Our <span className="text-[#2f7af7]">Vision</span>
+          </div>
+          <div>
+            <img src="/images/company_mission.jpg" alt="Company-Mission" className="w-200" />
+          </div>
+        </div>
+        <div className="flex flex-col justify-center md:flex-row md:justify-between w-[88%]">
+        <div>
+            <img src="/images/company_values.webp" alt="Company-Values" className="w-204" />
+          </div>
+          <div className="bg-[#2f7af7] flex flex-col items-center justify-center p-4">
+          <span className="text-4xl inline-block font-bold text-white mb-4">
+                Our <span className="text-white">Vision</span>
               </span>
-              <p className="text-lg font-light leading-relaxed text-gray-700 max-w-3xl mx-auto ">
-                Our vision is to revolutionize the digital landscape by
+              <p className="text-lg font-light leading-relaxed text-white text-center max-w-3xl mx-auto ">
+              Our vision is to revolutionize the digital landscape by
                 delivering innovative, reliable, and scalable technology
                 solutions that empower organizations to thrive in a connected
                 world
               </p>
-            </div>
           </div>
+        </div>
         </div>
       </section>
 
@@ -152,7 +153,7 @@ export default function AboutPage() {
           <span className="text-4xl inline-block font-bold text-black mb-10">
             Our Core <span className="text-[#2f7af7]">Values</span>
           </span>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-x-10 gap-y-4">
+          <div className="grid grid-cols-1 md:grid-cols-3 place-items-center gap-x-10 gap-y-4">
             {[
               {
                 itemNo: 1,
@@ -187,12 +188,12 @@ export default function AboutPage() {
             ].map((value, index) => (
               <div
                 key={index}
-                className={`bg-[#2f7af7] w-100 scale-110
+                className={`bg-[#2f7af7] lg:w-100 scale-110
                py-2 transition-all duration-300 ${
-                 value.itemNo === 1 ? "rounded-tl-2xl" : ""
-               } ${value.itemNo === 3 ? "rounded-tr-2xl" : ""}
-                ${value.itemNo === 4 ? "rounded-bl-2xl" : ""}
-                ${value.itemNo === 6 ? "rounded-br-2xl" : ""}`}
+                 value.itemNo === 1 ? "md:rounded-tl-2xl" : ""
+               } ${value.itemNo === 3 ? "md:rounded-tr-2xl" : ""}
+                ${value.itemNo === 4 ? "md:rounded-bl-2xl" : ""}
+                ${value.itemNo === 6 ? "md:rounded-br-2xl" : ""}`}
               >
                 <div
                   className={`${
@@ -249,46 +250,46 @@ export default function AboutPage() {
           Our <span className="text-[#2f7af7]">Journey</span>
         </span>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <div className="flex flex-col items-end relative space-y-16 justify-center md:border-r-2 md:pr-4 md:border-r-[#002049] border-dashed">
+          <div className="flex flex-col px-4 md:px-0 w-[100%] items-center md:items-end relative space-y-4 md:space-y-16 justify-center md:border-r-2 md:pr-4 md:border-r-[#002049] border-dashed">
             <div className="invisible md:visible absolute bg-[#2f7af7] w-5 h-5 top-13 right-[-11] rounded-[50%]"></div>
             <div className=" invisible md:visible absolute bg-[#2f7af7] w-5 h-5 top-38 right-[-11] rounded-[50%] "></div>
             <div className=" invisible md:visible absolute bg-[#2f7af7] w-5 h-5 bottom-45 right-[-11] rounded-[50%] "></div>
             <div className=" invisible md:visible absolute bg-[#2f7af7] w-5 h-5 bottom-21 right-[-11] rounded-[50%] "></div>
             <div className=" invisible md:visible absolute bg-[#2f7af7] w-5 h-5 bottom-[-10] right-[-11] rounded-[50%] "></div>
-            <div className="flex flex-col items-end justify-center text-gray-900 md:w-100 h-[130px] px-4 py-2 rounded border-r-4 bg-white border-r-black">
+            <div className="flex flex-col w-[100%] items-start md:items-end justify-center text-gray-900 md:w-100 h-[130px] px-4 py-2 rounded md:border-r-4 bg-white md:border-r-black">
               <span className="font-medium text-[#2f7af7] text-lg">
                 Establishment
               </span>
               <span className="text-sm text-gray-500 font-bold">2017</span>
-              <p className="font-light text-base text-end">
+              <p className="font-light text-base text-start md:text-end">
                 Incorporation with SECP and opening of offices in Lahore,
                 Pakistan.
               </p>
             </div>
-            <div className="flex flex-col items-end justify-center h-[130px] text-gray-900 md:w-100 px-4 py-2 rounded border-r-4 bg-white border-r-black">
+            <div className="flex flex-col w-[100%] items-start md:items-end justify-center h-[130px] text-gray-900 md:w-100 px-4 py-2 rounded md:border-r-4 bg-white md:border-r-black">
               <span className="font-medium text-[#2f7af7] text-lg">
                 Expansion of Business in Karachi
               </span>
               <span className="text-sm text-gray-500 font-bold">2021</span>
-              <p className="font-light text-base text-end">
+              <p className="font-light text-base text-start md:text-end">
                 Opened first office in Pakistan's largest city with high
                 potential.
               </p>
             </div>
-            <div className="flex flex-col items-end justify-center text-gray-900 md:w-100 h-[130px] px-4 py-2 rounded border-r-4 bg-white border-r-black">
+            <div className="flex flex-col w-[100%] items-start md:items-end justify-center text-gray-900 md:w-100 h-[130px] px-4 py-2 rounded md:border-r-4 bg-white md:border-r-black">
               <span className="font-medium text-[#2f7af7] text-lg">
                 Taking Leadership across Domains
               </span>
               <span className="text-sm text-gray-500 font-bold">
                 2023 & Beyond
               </span>
-              <p className="font-light text-end text-base">
+              <p className="font-light text-start md:text-end text-base">
                 Leading digital transformation and ERP solutions.
               </p>
             </div>
           </div>
-          <div className="flex flex-col items-start space-y-16 justify-center">
-            <div className="flex flex-col items-start justify-center text-gray-900 h-[130px] md:w-100 px-4 py-2 rounded border-l-4 bg-white border-l-black">
+          <div className="flex flex-col px-4 md:px-0 w-[100%] items-center md:items-start space-y-4 md:space-y-16 justify-center">
+            <div className="flex flex-col w-[100%] items-start justify-center text-gray-900 h-[130px] md:w-100 px-4 py-2 rounded md:border-l-4 bg-white md:border-l-black">
               <span className="font-medium text-[#2f7af7] text-lg">
                 Business across multiple Domains
               </span>
@@ -298,7 +299,7 @@ export default function AboutPage() {
                 & Care, Education etc.
               </p>
             </div>
-            <div className="flex flex-col items-start justify-center text-gray-900 h-[130px] md:w-100 px-4 py-2 rounded border-l-4 bg-white border-l-black">
+            <div className="flex flex-col w-[100%] items-start justify-center text-gray-900 h-[130px] md:w-100 px-4 py-2 rounded md:border-l-4 bg-white md:border-l-black">
               <span className="font-medium text-[#2f7af7] text-lg">
                 Providing digital educational solutions
               </span>
