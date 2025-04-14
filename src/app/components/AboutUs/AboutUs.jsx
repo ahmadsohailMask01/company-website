@@ -14,25 +14,31 @@ import {
 import Popup from "reactjs-popup";
 
 export default function AboutPage() {
+  const sourceRef = useRef(null);
+  const targetRef = useRef(null);
+
   const coreValuesButtonRef = useRef(null);
   const popupRefs = useRef([]);
   useEffect(() => {
-    let index = 0;
-    const interval = setInterval(() => {
-      // Close previous popup
-      const prev = index === 0 ? icons.length - 1 : index - 1;
-      popupRefs.current[prev]?.close();
+    const syncHeight = () => {
+      if (sourceRef.current && targetRef.current) {
+        const height = sourceRef.current.offsetHeight;
+        targetRef.current.style.height = `${height}px`;
+      }
+    };
 
-      // Open current popup
-      popupRefs.current[index]?.open();
+    // Initial sync
+    syncHeight();
 
-      // Move to next index
-      index = (index + 1) % icons.length;
-    }, 2000); // show each for 2 seconds
+    // Listen for window resize
+    window.addEventListener('change', syncHeight);
 
-    return () => clearInterval(interval);
+    // Cleanup on unmount
+    return () => {
+      window.removeEventListener('resize', syncHeight);
+    };
   }, []);
-  const radius = 200;
+  
   const icons = [
     {
       id: 1,
@@ -113,7 +119,7 @@ export default function AboutPage() {
       <section className="pb-24 pt-4 w-full bg-gradient-to-b from-white via-[#e6f0ff] to-white">
         <div className="px-6 flex flex-col justify-center items-center">
         <div className="flex flex-col justify-center md:flex-row md:justify-between w-[88%]">
-          <div className="bg-[#2f7af7] flex flex-col items-center justify-center p-4">
+          <div className="bg-[#2f7af7] flex flex-col items-center justify-center p-4 w-[50.1%] h-80" ref={sourceRef}>
           <span className="text-4xl inline-block font-bold text-white mb-4">
                 Our <span className="text-white">Mission</span>
               </span>
@@ -124,15 +130,15 @@ export default function AboutPage() {
                 execution in every project we take on.
               </p>
           </div>
-          <div>
-            <img src="/images/company_mission.jpg" alt="Company-Mission" className="w-200" />
+          <div className="w-[50%]" ref={targetRef}>
+            <img src="/images/company_mission.jpg" alt="Company-Mission" className="w-[100%]" />
           </div>
         </div>
         <div className="flex flex-col justify-center md:flex-row md:justify-between w-[88%]">
-        <div>
-            <img src="/images/company_vis.jpg" alt="Company-Vision" className="w-204 h-90" />
+        <div className="w-[50%]">
+            <img src="/images/company_vis.jpg" alt="Company-Vision" className="w-[100%] h-80" />
           </div>
-          <div className="bg-[#2f7af7] flex flex-col items-center justify-center p-4">
+          <div className="bg-[#2f7af7] flex flex-col items-center justify-center p-4 w-[50%]">
           <span className="text-4xl inline-block font-bold text-white mb-4">
                 Our <span className="text-white">Vision</span>
               </span>
